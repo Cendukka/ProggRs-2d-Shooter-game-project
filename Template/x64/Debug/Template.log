@@ -1,0 +1,49 @@
+﻿  imgui_sdl.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\include\IMGUI_SDL\imgui_sdl.cpp(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Button.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  CollisionManager.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  DisplayObject.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  EndScene.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  FontManager.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\FontManager.h(10,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Game.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\Game.h(10,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GameObject.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Label.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Level1Scene.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  main.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\main.cpp(16,10): fatal error C1083: Cannot open include file: 'GLEW\glew.h': No such file or directory
+  Mine.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Planet.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  PlayScene.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Scene.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  ship.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  SoundManager.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\SoundManager.h(10,10): fatal error C1083: Cannot open include file: 'SDL_mixer.h': No such file or directory
+  StartButton.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  StartScene.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Target.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Generating Code...
+  Compiling...
+  TextureManager.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\TextureManager.h(11,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Tile.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\GameObject.h(5,10): fatal error C1083: Cannot open include file: 'glm\vec2.hpp': No such file or directory
+  Util.cpp
+C:\Users\samul\Documents\GitHub\COMP397-W2020-Lesson4A\src\Util.h(5,10): fatal error C1083: Cannot open include file: 'GLM/vec2.hpp': No such file or directory
+  Generating Code...
