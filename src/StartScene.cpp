@@ -18,11 +18,14 @@ StartScene::~StartScene()
 void StartScene::draw()
 {
 	m_pStartLabel->draw();
+	m_pStartButton->draw();
 	
 }
 
 void StartScene::update()
 {
+	m_pStartButton->setMousePosition(m_mousePosition);
+	m_pStartButton->ButtonClick();
 }
 
 void StartScene::clean()
@@ -70,6 +73,8 @@ void StartScene::start()
 	m_pStartLabel = new Label("START SCENE", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
 	m_pStartLabel->setParent(this);
 	addChild(m_pStartLabel);
+	m_pStartButton = new StartButton();
+	m_pStartButton->setMouseButtonClicked(false);
 
 	
 }

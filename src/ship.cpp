@@ -3,6 +3,7 @@
 #include "Util.h"
 #include "GLM/gtx/rotate_vector.hpp"
 #include "PlayScene.h"
+#include "Level1Scene.h"
 #include "GLM/gtx/string_cast.hpp"
 
 
@@ -15,7 +16,7 @@ Ship::Ship() :
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("ship");
 	setWidth(size.x);
 	setHeight(size.y);
-	setPosition(glm::vec2(400.0f, 300.0f));
+	setPosition(getPosition());
 	setVelocity(glm::vec2(0.0f, 0.0f));
 	setAcceleration(glm::vec2(0.0f, 0.0f));
 	setIsColliding(false);

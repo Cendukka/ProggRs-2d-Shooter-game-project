@@ -1,4 +1,4 @@
-#include "StartButton.h"
+#include "ship.h"
 #include "Game.h"
 
 StartButton::StartButton()
@@ -23,6 +23,7 @@ bool StartButton::ButtonClick()
 		{
 			std::cout << "Mouse Button Clicked!" << std::endl;
 			m_isClicked = true;
+			TheGame::Instance()->changeSceneState(SceneState::LEVEL1_SCENE);
 		}
 		return true;
 	}

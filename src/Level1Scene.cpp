@@ -13,13 +13,15 @@ Level1Scene::~Level1Scene()
 
 void Level1Scene::draw()
 {
-	m_pStartButton->draw();
+	m_pShip->draw();
+	
+
 }
 
 void Level1Scene::update()
 {
-	m_pStartButton->setMousePosition(m_mousePosition);
-	m_pStartButton->ButtonClick();
+	
+	m_pShip->setPosition(m_mousePosition);
 }
 
 void Level1Scene::clean()
@@ -41,6 +43,7 @@ void Level1Scene::handleEvents()
 		case SDL_MOUSEMOTION:
 			m_mousePosition.x = event.motion.x;
 			m_mousePosition.y = event.motion.y;
+			
 			/*std::cout << "Mouse X: " << m_mousePosition.x << std::endl;
 			std::cout << "Mouse Y: " << m_mousePosition.y << std::endl;
 			std::cout << "---------------------------------------------" << std::endl;*/
@@ -50,7 +53,7 @@ void Level1Scene::handleEvents()
 			switch(event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				m_pStartButton->setMouseButtonClicked(true);
+				//m_pStartButton->setMouseButtonClicked(true);
 				break;
 			}
 		
@@ -59,7 +62,7 @@ void Level1Scene::handleEvents()
 			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				m_pStartButton->setMouseButtonClicked(false);
+				//m_pStartButton->setMouseButtonClicked(false);
 				break;
 			}
 			break;
@@ -125,8 +128,10 @@ void Level1Scene::handleEvents()
 void Level1Scene::start()
 {
 	// allocates memory on the heap for this game object
-	m_pStartButton = new StartButton();
-	m_pStartButton->setMouseButtonClicked(false);
+	
+	
+	m_pShip = new Ship();
+	
 }
 
 glm::vec2 Level1Scene::getMousePosition()
