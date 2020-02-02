@@ -5,6 +5,7 @@
 #include "Scene.h"
 
 #include "ship.h"
+#include "Bullet.h"
 
 class Level1Scene : public Scene
 {
@@ -28,6 +29,7 @@ private:
 	
 	
 	Ship* m_pShip;
+	Bullet* m_pBullet;
 };
 
 #endif /* defined (__LEVEL_1_SCENE__) */

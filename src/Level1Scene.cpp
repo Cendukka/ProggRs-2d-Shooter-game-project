@@ -13,15 +13,34 @@ Level1Scene::~Level1Scene()
 
 void Level1Scene::draw()
 {
+	//draws game objects
 	m_pShip->draw();
+	m_pBullet->draw();
 	
 
 }
 
 void Level1Scene::update()
 {
+	//ship follows the mouse
+	//also checks that ship won't go over half of the screen
+	if(m_mousePosition.x > (Config::SCREEN_WIDTH*0.5f))
+	{
+		m_pShip->setPosition(glm::vec2((Config::SCREEN_WIDTH * 0.5), m_mousePosition.y));
+	}
+	else
+	{
+		m_pShip->setPosition(m_mousePosition);
+	}
+
+	//std::cout << m_pBullet->getSpeed() << std::endl;
+	//updates bullet movement on x-axis
+	m_pBullet->setPosition(glm::vec2((m_pBullet->getPosition().x + m_pBullet->getSpeed()), m_pBullet->getPosition().y));
 	
-	m_pShip->setPosition(m_mousePosition);
+	
+	//Bullet place is on the tip of the ship
+	//m_pBullet->setPosition(glm::vec2(m_pShip->getPosition().x+35.0f, m_pShip->getPosition().y));
+	//m_pBullet->setPosition(m_mousePosition);
 }
 
 void Level1Scene::clean()
@@ -131,6 +150,7 @@ void Level1Scene::start()
 	
 	
 	m_pShip = new Ship();
+	m_pBullet = new Bullet();
 	
 }
 
