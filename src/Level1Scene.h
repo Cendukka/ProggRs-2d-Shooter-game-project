@@ -12,7 +12,7 @@ class Level1Scene : public Scene
 public:
 	Level1Scene();
 	~Level1Scene();
-	
+
 	void draw() override;
 	void update() override;
 	void clean() override;
@@ -26,8 +26,8 @@ private:
 	// game objects
 
 	glm::vec2 m_mousePosition;
-	
-	
+
+
 	Ship* m_pShip;
 	Bullet* m_pBullet;
 };

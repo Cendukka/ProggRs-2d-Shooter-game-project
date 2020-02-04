@@ -14,6 +14,8 @@ Bullet::Bullet()
 	setPosition(glm::vec2(400.0f, 300.0f));
 	setType(BULLET);
 	setSpeed(10.0f);
+	setActive(false);
+	m_alpha = 255;
 }
 
 Bullet::~Bullet()
@@ -26,17 +28,44 @@ void Bullet::draw()
 	int yComponent = getPosition().y;
 
 	TheTextureManager::Instance()->draw("mineBullet", xComponent, yComponent,
-		TheGame::Instance()->getRenderer(), 0, 255, true);
+		TheGame::Instance()->getRenderer(), 0, m_alpha, true);
 }
 
 void Bullet::update()
 {
-	
-	
+	if (getPosition().x >= 799)
+	{
+		setActive(false);
+		m_alpha = 0;
+	}
+	if (isActive())
+	{
+		setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y));
+	}
+
+
 }
 
 void Bullet::clean()
 {
+}
+
+void Bullet::setActive(bool active)
+{
+	m_isActive = active;
+}
+
+bool Bullet::isActive()
+{
+	return m_isActive;
+}
+
+void Bullet::fire(glm::vec2 position)
+{
+	m_alpha = 255;
+	setPosition(position);
+	draw();
+	setActive(true);
 }
 
 void Bullet::setSpeed(float newSpeed)

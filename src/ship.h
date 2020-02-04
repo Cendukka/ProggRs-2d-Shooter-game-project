@@ -10,6 +10,7 @@
 
 #include "Tile.h"
 #include "Scene.h"
+#include "Bullet.h"
 
 class Ship :
 	public DisplayObject
@@ -33,10 +34,12 @@ public:
 	Tile* getTile();
 	void setTile(Tile* newTile);
 
+	static const int MAX_BULLETS = 10;
+	Bullet* mBullets[MAX_BULLETS];
+	void handleFiring();
 	glm::vec2 getTarget();
 	void setTarget(glm::vec2 position);
 private:
-
 
 	void m_checkState();
 	void m_checkBounds();

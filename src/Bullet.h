@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "DisplayObject.h"
-
+#include <SDL_hints.h>
 
 
 class Bullet : public DisplayObject
@@ -14,27 +14,31 @@ class Bullet : public DisplayObject
 public:
 	Bullet();
 	~Bullet();
-	
+
 	void draw() override;
 	void update() override;
 	void clean() override;
 
+	void setActive(bool active);
+	bool isActive();
+
+	void fire(glm::vec2 position);
 	//setter
 	void setSpeed(float newSpeed);
 	//getter
 	float getSpeed();
 	void checkBounds();
-	
+
 private:
-	
-	
-	
+
+	Uint8 m_alpha;
+	bool m_isActive;
+
 	float m_speed;
-	
+
 };
 
 
 
 
 #endif
-

@@ -15,8 +15,8 @@ void Level1Scene::draw()
 {
 	//draws game objects
 	m_pShip->draw();
-	m_pBullet->draw();
-	
+	//m_pBullet->draw();
+
 
 }
 
@@ -24,7 +24,7 @@ void Level1Scene::update()
 {
 	//ship follows the mouse
 	//also checks that ship won't go over half of the screen
-	if(m_mousePosition.x > (Config::SCREEN_WIDTH*0.5f))
+	if (m_mousePosition.x > (Config::SCREEN_WIDTH * 0.5f))
 	{
 		m_pShip->setPosition(glm::vec2((Config::SCREEN_WIDTH * 0.5), m_mousePosition.y));
 	}
@@ -32,12 +32,13 @@ void Level1Scene::update()
 	{
 		m_pShip->setPosition(m_mousePosition);
 	}
+	m_pShip->update();
 
 	//std::cout << m_pBullet->getSpeed() << std::endl;
 	//updates bullet movement on x-axis
-	m_pBullet->setPosition(glm::vec2((m_pBullet->getPosition().x + m_pBullet->getSpeed()), m_pBullet->getPosition().y));
-	
-	
+	//m_pBullet->setPosition(glm::vec2((m_pBullet->getPosition().x + m_pBullet->getSpeed()), m_pBullet->getPosition().y));
+
+
 	//Bullet place is on the tip of the ship
 	//m_pBullet->setPosition(glm::vec2(m_pShip->getPosition().x+35.0f, m_pShip->getPosition().y));
 	//m_pBullet->setPosition(m_mousePosition);
@@ -62,20 +63,16 @@ void Level1Scene::handleEvents()
 		case SDL_MOUSEMOTION:
 			m_mousePosition.x = event.motion.x;
 			m_mousePosition.y = event.motion.y;
-			
-			/*std::cout << "Mouse X: " << m_mousePosition.x << std::endl;
-			std::cout << "Mouse Y: " << m_mousePosition.y << std::endl;
-			std::cout << "---------------------------------------------" << std::endl;*/
-			break;
 
 		case SDL_MOUSEBUTTONDOWN:
-			switch(event.button.button)
+			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
-				//m_pStartButton->setMouseButtonClicked(true);
+				//m_pBullet->fire(m_pShip->getPosition());
+				m_pShip->handleFiring();
 				break;
 			}
-		
+
 			break;
 		case SDL_MOUSEBUTTONUP:
 			switch (event.button.button)
@@ -100,43 +97,42 @@ void Level1Scene::handleEvents()
 			case SDLK_2:
 				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
 				break;
-			
 
 				/************************************************************************/
 			case SDLK_w:
-				
+
 				break;
 			case SDLK_s:
-				
+
 				break;
 			case SDLK_a:
-				
+
 				break;
 			case SDLK_d:
-				
+
 				break;
 			}
-			
+
 			break;
 		case SDL_KEYUP:
 			switch (event.key.keysym.sym)
 			{
 			case SDLK_w:
-				
+
 				break;
 
 			case SDLK_s:
-				
+
 				break;
 
 			case SDLK_a:
-				
+
 				break;
 			case SDLK_d:
-				
+
 				break;
 			}
-			
+
 			break;
 		default:
 			break;
@@ -147,11 +143,11 @@ void Level1Scene::handleEvents()
 void Level1Scene::start()
 {
 	// allocates memory on the heap for this game object
-	
-	
+
+
 	m_pShip = new Ship();
 	m_pBullet = new Bullet();
-	
+
 }
 
 glm::vec2 Level1Scene::getMousePosition()
@@ -167,7 +163,7 @@ bool Level1Scene::m_MouseOver()
 	float width = m_pStartButton->getWidth();
 	float height = m_pStartButton->getHeight();
 
-	
+
 	if(m_mousePosition.x > topLeftX &&
 		m_mousePosition.x < topLeftX + width &&
 		m_mousePosition.y > topLeftY &&

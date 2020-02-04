@@ -22,6 +22,11 @@ Ship::Ship() :
 	setIsColliding(false);
 	setType(GameObjectType::SHIP);
 	setState(SteeringState::IDLE);
+
+	for (int i = 0; i < MAX_BULLETS; i++)
+	{
+		mBullets[i] = new Bullet();
+	}
 }
 
 
@@ -36,6 +41,10 @@ void Ship::draw()
 
 	TheTextureManager::Instance()->draw("ship", xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), m_currentDirection, 255, true);
+	for (int i = 0; i < MAX_BULLETS; i++)
+	{
+		mBullets[i]->draw();
+	}
 }
 
 void Ship::m_checkState()
@@ -61,7 +70,25 @@ void Ship::m_checkState()
 void Ship::update()
 {
 	move();
+	//handleFiring();
+	for (int i = 0; i < MAX_BULLETS; i++)
+	{
+		mBullets[i]->update();
+	}
 }
+
+void Ship::handleFiring()
+{
+	for (int i = 0; i < MAX_BULLETS; i++)
+	{
+		if (!mBullets[i]->isActive())
+		{
+			mBullets[i]->fire(this->getPosition());
+			break;
+		}
+	}
+}
+
 
 void Ship::clean()
 {
@@ -72,7 +99,7 @@ void Ship::clean()
 void Ship::turnRight()
 {
 	m_currentDirection += m_turnSpeed;
-	if (m_currentDirection >= 360) 
+	if (m_currentDirection >= 360)
 	{
 		m_currentDirection = 0;
 	}
@@ -98,11 +125,11 @@ void Ship::move()
 		glm::vec2 newPosition = getPosition() + getVelocity();
 		setPosition(newPosition);
 	}
-	
+
 
 }
 
-Tile * Ship::getTile()
+Tile* Ship::getTile()
 {
 	return m_currentTile;
 }
