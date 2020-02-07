@@ -21,6 +21,7 @@ public:
 
 	// getters
 	glm::vec2 getMousePosition();
+	void drawBackground();
 
 private:
 	// game objects

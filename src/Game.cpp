@@ -200,7 +200,7 @@ void Game::handleEvents()
 	m_currentScene->handleEvents();
 
 	SDL_Event event;
-	if (SDL_PollEvent(&event))
+	while (SDL_PollEvent(&event))
 	{
 		switch (event.type)
 		{

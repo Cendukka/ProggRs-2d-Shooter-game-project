@@ -67,3 +67,7 @@ void EndScene::start()
 	m_Label->setParent(this);
 	addChild(m_Label);
 }
+
+void EndScene::drawBackground()
+{
+}

@@ -17,6 +17,7 @@ public:
 	virtual void clean() override;
 	virtual void handleEvents() override;
 	virtual void start() override;
+	virtual void drawBackground() override;
 
 private:
 	Label* m_Label;
