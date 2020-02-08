@@ -10,10 +10,11 @@
 Ship::Ship() :
 	m_maxSpeed(5.0f), m_currentDirection(0.0f), m_turnSpeed(2.0f), m_steerForce(0.1f), m_currentTile(NULL)
 {
-	TheTextureManager::Instance()->load("../Assets/Ship_01/Ship_LVL_1.png",
+	TheTextureManager::Instance()->load("../Assets/Ship_01/Ship_LVL_1_Right.png",
 		"ship", TheGame::Instance()->getRenderer());
 
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("ship");
+	
 	setWidth(size.x);
 	setHeight(size.y);
 	setPosition(getPosition());
@@ -40,7 +41,7 @@ void Ship::draw()
 	int yComponent = getPosition().y;
 
 	TheTextureManager::Instance()->draw("ship", xComponent, yComponent,
-		TheGame::Instance()->getRenderer(), m_currentDirection, 255, true);
+		TheGame::Instance()->getRenderer(), m_currentDirection, 255,true );
 	for (int i = 0; i < MAX_BULLETS; i++)
 	{
 		mBullets[i]->draw();

@@ -4,10 +4,10 @@
 Mine::Mine() :
 	m_currentTile(NULL)
 {
-	TheTextureManager::Instance()->load("../Assets/textures/mine.png",
-		"mine", TheGame::Instance()->getRenderer());
+	TheTextureManager::Instance()->load("../Assets/Meteors/Meteor_01.png",
+		"meteor", TheGame::Instance()->getRenderer());
 
-	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("mine");
+	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("meteor");
 	setWidth(size.x);
 	setHeight(size.y);
 	setPosition(glm::vec2(0.0f, 0.0f));
@@ -23,6 +23,8 @@ void Mine::draw()
 {
 	int xComponent = getPosition().x;
 	int yComponent = getPosition().y;
+
+	
 
 	TheTextureManager::Instance()->draw("mine", xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), 0, 255, true);

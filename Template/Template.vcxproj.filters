@@ -69,26 +69,14 @@
     <ClCompile Include="..\src\Mine.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Planet.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ship.cpp">
-      <Filter>Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Target.cpp">
       <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\StartScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\PlayScene.cpp">
-      <Filter>Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\EndScene.cpp">
       <Filter>Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Tile.cpp">
-      <Filter>Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\src\DisplayObject.cpp">
       <Filter>Source Files</Filter>
@@ -155,9 +143,6 @@
     <ClInclude Include="..\src\Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\TileComparators.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -167,26 +152,14 @@
     <ClInclude Include="..\src\Mine.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Planet.h">
-      <Filter>Game Objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\ship.h">
-      <Filter>Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Target.h">
       <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\StartScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\PlayScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\EndScene.h">
       <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Tile.h">
-      <Filter>Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\src\DisplayObject.h">
       <Filter>Header Files</Filter>
