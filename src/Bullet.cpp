@@ -5,7 +5,7 @@
 
 Bullet::Bullet()
 {
-	TheTextureManager::Instance()->load("../Assets/textures/Mine.png",
+	TheTextureManager::Instance()->load("../Assets/Sprites/Missiles/Missile_1_Flying_000.png",
 		"mineBullet", TheGame::Instance()->getRenderer());
 
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("mineBullet");

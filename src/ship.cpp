@@ -10,7 +10,7 @@
 Ship::Ship() :
 	m_maxSpeed(5.0f), m_currentDirection(0.0f), m_turnSpeed(2.0f), m_steerForce(0.1f), m_currentTile(NULL)
 {
-	TheTextureManager::Instance()->load("../Assets/textures/ship3.png",
+	TheTextureManager::Instance()->load("../Assets/Ship_01/Ship_LVL_1.png",
 		"ship", TheGame::Instance()->getRenderer());
 
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("ship");

@@ -1,14 +1,20 @@
-﻿  Level1Scene.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(59,105): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(59,76): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(63,89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(63,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(90,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  Background.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(91,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(30,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float

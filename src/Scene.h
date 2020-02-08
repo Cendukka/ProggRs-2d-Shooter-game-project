@@ -23,7 +23,6 @@ public:
 	virtual void clean() override = 0;
 	virtual void handleEvents() = 0;
 	virtual void start() = 0;
-	virtual void drawBackground() = 0;
 
 	void addChild(DisplayObject* child);
 	void removeAllChildren();

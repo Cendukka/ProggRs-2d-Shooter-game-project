@@ -1,6 +1,7 @@
 #include "Level1Scene.h"
 #include "Game.h"
 #include <iostream>
+#include "Background.h"
 
 Level1Scene::Level1Scene()
 {
@@ -14,7 +15,8 @@ Level1Scene::~Level1Scene()
 void Level1Scene::draw()
 {
 	//draws game objects
-	drawBackground();
+	
+	m_pBackground->draw();
 	m_pShip->draw();
 	//m_pBullet->draw();
 
@@ -34,6 +36,7 @@ void Level1Scene::update()
 		m_pShip->setPosition(m_mousePosition);
 	}
 	m_pShip->update();
+	m_pBackground->update();
 	
 
 	//std::cout << m_pBullet->getSpeed() << std::endl;
@@ -46,30 +49,7 @@ void Level1Scene::update()
 	//m_pBullet->setPosition(m_mousePosition);
 }
 
-void Level1Scene::drawBackground()
-{
-	TheTextureManager::Instance()->load("../Assets/BG1.png", "level1Scene1", TheGame::Instance()->getRenderer());
-	TheTextureManager::Instance()->load("../Assets/BG1.png", "level1Scene2", TheGame::Instance()->getRenderer());
-	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("level1Scene");
-	for(int i = 0; i<2; i++)
-	{
-		switch (i)
-		{
-		case 0:
 
-		
-			TheTextureManager::Instance()->draw("level1Scene1", Config::SCREEN_WIDTH * 0.5, Config::SCREEN_HEIGHT * 0.5, TheGame::Instance()->getRenderer(), 0, 255, true);
-			break;
-		case 1:
-
-			TheTextureManager::Instance()->draw("level1Scene2", size.x*1.5, Config::SCREEN_HEIGHT * 0.5, TheGame::Instance()->getRenderer(), 0, 255, true);
-			break;
-		default:
-			break;
-		}
-	}
-	
-};
 
 void Level1Scene::clean()
 {
@@ -175,6 +155,7 @@ void Level1Scene::start()
 
 	m_pShip = new Ship();
 	m_pBullet = new Bullet();
+	m_pBackground = new Background();
 
 }
 

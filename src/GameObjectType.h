@@ -15,6 +15,7 @@ enum GameObjectType {
 	MINE,
 	TILE,
 	START_BUTTON,
+	BACK_GROUND,
 	NUM_OF_TYPES
 };
 

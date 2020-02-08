@@ -68,6 +68,3 @@ void EndScene::start()
 	addChild(m_Label);
 }
 
-void EndScene::drawBackground()
-{
-}

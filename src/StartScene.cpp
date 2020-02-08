@@ -103,6 +103,3 @@ void StartScene::start()
 
 	
 }
-void StartScene::drawBackground()
-{
-}

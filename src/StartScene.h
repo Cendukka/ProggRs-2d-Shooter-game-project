@@ -20,7 +20,7 @@ public:
 	virtual void clean() override;
 	virtual void handleEvents() override;
 	virtual void start() override;
-	virtual void drawBackground() override;
+	
 	// getters
 	glm::vec2 getMousePosition();
 private:
