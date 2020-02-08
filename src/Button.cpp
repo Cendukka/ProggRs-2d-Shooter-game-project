@@ -22,9 +22,11 @@ void Button::draw()
 {
 	int xComponent = getPosition().x;
 	int yComponent = getPosition().y;
+	
+
 
 	TheTextureManager::Instance()->draw(m_name, xComponent, yComponent,
-		TheGame::Instance()->getRenderer(), 0, m_alpha, true);
+		TheGame::Instance()->getRenderer(), 0, m_alpha,true);
 }
 
 void Button::update()

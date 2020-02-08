@@ -5,12 +5,12 @@
 
 Bullet::Bullet()
 {
-	TheTextureManager::Instance()->load("../Assets/Sprites/Missiles/Missile_1_Flying_000.png",
-		"mineBullet", TheGame::Instance()->getRenderer());
+	TheTextureManager::Instance()->load("../Assets/Sprites/Missile/Missile_1_Flying_000_Right.png",
+		"Bullet", TheGame::Instance()->getRenderer());
 
-	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("mineBullet");
-	setWidth(size.x);
-	setHeight(size.y);
+	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("Bullet");
+	setWidth(20);
+	setHeight(20);
 	setPosition(glm::vec2(400.0f, 300.0f));
 	setType(BULLET);
 	setSpeed(10.0f);
@@ -26,8 +26,9 @@ void Bullet::draw()
 {
 	int xComponent = getPosition().x;
 	int yComponent = getPosition().y;
+	
 
-	TheTextureManager::Instance()->draw("mineBullet", xComponent, yComponent,
+	TheTextureManager::Instance()->draw("Bullet", xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), 0, m_alpha, true);
 }
 

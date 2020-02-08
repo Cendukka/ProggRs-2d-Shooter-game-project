@@ -37,8 +37,8 @@ void Background::draw()
 	int xComponent = getPosition().x;
 	int yComponent = getPosition().y;
 	
-			TheTextureManager::Instance()->draw("level1Scene1", xComponent, yComponent, TheGame::Instance()->getRenderer(), 0, 255, true);
-			TheTextureManager::Instance()->draw("level1Scene2", xComponent+Config::SCREEN_WIDTH, yComponent, TheGame::Instance()->getRenderer(), 0, 255, true);
+	TheTextureManager::Instance()->draw("level1Scene1", xComponent, yComponent, TheGame::Instance()->getRenderer(), 0, 255,true);
+	TheTextureManager::Instance()->draw("level1Scene2", xComponent+Config::SCREEN_WIDTH, yComponent, TheGame::Instance()->getRenderer(), 0, 255, true);
 	
 	/*glm::vec2 size = TheTextureManager::Instance()->getTextureSize("level1Scene");
 	for (int i = 0; i < 2; i++)
