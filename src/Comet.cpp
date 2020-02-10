@@ -9,10 +9,11 @@ Comet::Comet()
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("comet");
 	setWidth(size.x);
 	setHeight(size.y);
-	setPosition(getPosition());
+	setPosition(glm::vec2(0.0f, 0.0f));
 	setVelocity(glm::vec2(0.0f, 0.0f));
 	setAcceleration(glm::vec2(0.0f, 0.0f));
 	setIsColliding(false);
+	setActive(true);
 	setType(GameObjectType::COMET);
 }
 
@@ -24,8 +25,8 @@ void Comet::draw()
 {
 	int xComponent = getPosition().x;
 	int yComponent = getPosition().y;
-	xComponent = 700;
-	yComponent = 300;
+	//xComponent = 700;
+	//yComponent = 300;
 
 	TheTextureManager::Instance()->draw("comet", xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), m_currentDirection, m_alpha, true);
@@ -40,6 +41,7 @@ void Comet::update()
 	if(getPosition().x <= 0)
 	{
 		currentPosition.x = 800;
+		currentPosition.y = Config::SCREEN_HEIGHT*0.5;
 		setPosition(currentPosition);
 	}
 	
@@ -48,9 +50,21 @@ void Comet::update()
 void Comet::clean()
 {
 	setIsColliding(false);
+	
+	setActive(false);
 }
 
 void Comet::move()
 {
 	setPosition(glm::vec2((getPosition().x - 10), getPosition().y));
+}
+
+void Comet::setActive(bool active)
+{
+	m_isActive = active;
+}
+
+bool Comet::isActive()
+{
+	return m_isActive;
 }

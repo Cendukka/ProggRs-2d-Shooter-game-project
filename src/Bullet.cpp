@@ -12,7 +12,7 @@ Bullet::Bullet()
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("Bullet");
 	setWidth(20);
 	setHeight(20);
-	setPosition(glm::vec2(400.0f, 300.0f));
+	//setPosition(glm::vec2(400.0f, 300.0f));
 	setType(BULLET);
 	setSpeed(10.0f);
 	setActive(false);

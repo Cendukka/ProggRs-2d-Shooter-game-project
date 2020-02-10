@@ -17,10 +17,13 @@ public:
 	void update() override;
 	void clean() override;
 	void move();
+	void setActive(bool active);
+	bool isActive();
 private:
 	float m_maxSpeed;
 	double m_currentDirection;
 	Uint8 m_alpha;
+	bool m_isActive;
 };
 
 #endif
