@@ -7,6 +7,7 @@
 
 #include "DisplayObject.h"
 #include <SDL_hints.h>
+#include "Comet.h"
 
 
 class Bullet : public DisplayObject
@@ -28,12 +29,13 @@ public:
 	//getter
 	float getSpeed();
 	void checkBounds();
+	void setComet(Comet* pcomet);
 
 private:
 
 	Uint8 m_alpha;
 	bool m_isActive;
-
+	Comet* m_pComet;
 	float m_speed;
 
 };

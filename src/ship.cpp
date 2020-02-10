@@ -91,6 +91,7 @@ void Ship::handleFiring()
 }
 
 
+
 void Ship::clean()
 {
 	delete m_currentTile;

@@ -1,46 +1,22 @@
-﻿  Mine.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(11,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+﻿  Comet.cpp
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(12,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(24,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(25,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(25,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(26,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-  ship.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(18,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(19,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(40,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(41,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(182,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  StartButton.cpp
-  Generating Code...
-  Template.vcxproj -> C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

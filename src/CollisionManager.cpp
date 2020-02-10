@@ -17,23 +17,24 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 {
 	glm::vec2 P1 = object1->getPosition();
 	glm::vec2 P2 = object2->getPosition();
-	int halfHeights = (object1->getHeight() + object2->getHeight()) * 0.5f;
+	int halfWidth = (object1->getWidth() + object2->getWidth()) * 0.5f;
 
 	//if (glm::distance(P1, P2) < halfHeights) {
 
-	if (CollisionManager::squaredDistance(P1, P2) < (halfHeights * halfHeights)) {
+	if (CollisionManager::squaredDistance(P1, P2) < (halfWidth * halfWidth)) {
 		if (!object2->getIsColliding()) {
 
 			object2->setIsColliding(true);
 
 			switch (object2->getType()) {
-			case PLANET:
-				std::cout << "Collision with Planet!" << std::endl;
-				TheSoundManager::Instance()->playSound("yay", 0);
+			case COMET:
+				std::cout << "Collision with Comet!" << std::endl;
+				object2->clean();
+				//TheSoundManager::Instance()->playSound("yay", 0);
 				break;
-			case MINE:
-				std::cout << "Collision with Mine!" << std::endl;
-				TheSoundManager::Instance()->playSound("thunder", 0);
+			case BULLET:
+				std::cout << "Collision with Bullet!" << std::endl;
+				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;
 			default:
 				//std::cout << "Collision with unknown type!" << std::endl;
@@ -73,10 +74,10 @@ bool CollisionManager::AABBCheck(GameObject* object1, GameObject* object2)
 			object2->setIsColliding(true);
 
 			switch (object2->getType()) {
-			case PLANET:
-				std::cout << "Collision with Platform!" << std::endl;
-				TheSoundManager::Instance()->playSound("yay", 0);
-				break;
+			//case PLANET:
+			//	std::cout << "Collision with Platform!" << std::endl;
+			//	TheSoundManager::Instance()->playSound("yay", 0);
+			//	break;
 			default:
 				//std::cout << "Collision with unknown type!" << std::endl;
 				break;
@@ -220,14 +221,14 @@ bool CollisionManager::circleAABBCheck(GameObject* object1, GameObject* object2)
 			//std::cout << "Angle: " << angle << std::endl;
 
 			switch (object2->getType()) {
-			case PLANET:
-				std::cout << "Collision with Planet!" << std::endl;
-				TheSoundManager::Instance()->playSound("yay", 0);
-				break;
-			case MINE:
-				std::cout << "Collision with Mine!" << std::endl;
-				TheSoundManager::Instance()->playSound("thunder", 0);
-				break;
+			//case PLANET:
+			//	std::cout << "Collision with Planet!" << std::endl;
+			//	TheSoundManager::Instance()->playSound("yay", 0);
+			//	break;
+			//case MINE:
+			//	std::cout << "Collision with Mine!" << std::endl;
+			//	TheSoundManager::Instance()->playSound("thunder", 0);
+			//	break;
 			case SHIP:
 				//std::cout << "Collision with Ship!" << std::endl;
 				TheSoundManager::Instance()->playSound("thunder", 0);

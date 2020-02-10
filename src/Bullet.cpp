@@ -1,6 +1,7 @@
 #include "Bullet.h"
 #include "Game.h"
 #include "Level1Scene.h"
+#include "CollisionManager.h"
 
 
 Bullet::Bullet()
@@ -43,9 +44,17 @@ void Bullet::update()
 	{
 		setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y));
 	}
-
-
+	if(m_pComet != nullptr)
+	{
+		Collision::squaredRadiusCheck(this, m_pComet);
+	}
 }
+
+void Bullet::setComet(Comet* pcomet)
+{
+	m_pComet = pcomet;
+}
+
 
 void Bullet::clean()
 {

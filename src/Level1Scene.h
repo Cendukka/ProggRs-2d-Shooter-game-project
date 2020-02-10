@@ -7,6 +7,7 @@
 #include "ship.h"
 #include "Bullet.h"
 #include "Background.h"
+#include "Comet.h"
 
 class Level1Scene : public Scene
 {
@@ -33,6 +34,7 @@ private:
 	Ship* m_pShip;
 	Bullet* m_pBullet;
 	Background* m_pBackground;
+	Comet* m_pComet;
 };
 
 #endif /* defined (__LEVEL_1_SCENE__) */

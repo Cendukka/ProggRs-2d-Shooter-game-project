@@ -2,6 +2,7 @@
 #include "Game.h"
 #include <iostream>
 #include "Background.h"
+#include "CollisionManager.h"
 
 Level1Scene::Level1Scene()
 {
@@ -18,6 +19,7 @@ void Level1Scene::draw()
 	
 	m_pBackground->draw();
 	m_pShip->draw();
+	m_pComet->draw();
 	//m_pBullet->draw();
 
 
@@ -36,7 +38,9 @@ void Level1Scene::update()
 		m_pShip->setPosition(m_mousePosition);
 	}
 	m_pShip->update();
+	m_pComet->update();
 	m_pBackground->update();
+	//Collision::squaredRadiusCheck(m_pShip->getBullet(), m_pComet);
 	
 
 	//std::cout << m_pBullet->getSpeed() << std::endl;
@@ -156,7 +160,11 @@ void Level1Scene::start()
 	m_pShip = new Ship();
 	m_pBullet = new Bullet();
 	m_pBackground = new Background();
-
+	m_pComet = new Comet();
+	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
+	{
+		m_pShip->mBullets[i]->setComet(m_pComet);
+	}
 }
 
 glm::vec2 Level1Scene::getMousePosition()

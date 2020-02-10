@@ -12,7 +12,7 @@ Mine::Mine() :
 	setHeight(size.y);
 	setPosition(glm::vec2(0.0f, 0.0f));
 	setVelocity(glm::vec2(0.0f, 0.0f));
-	setType(GameObjectType::MINE);
+	//setType(GameObjectType::MINE);
 }
 
 Mine::~Mine()
