@@ -13,15 +13,14 @@ Bullet::Bullet()
 	setWidth(20);
 	setHeight(20);
 	//setPosition(glm::vec2(400.0f, 300.0f));
+	setIsColliding(false);
 	setType(BULLET);
 	setSpeed(10.0f);
 	setActive(false);
 	m_alpha = 255;
 }
 
-Bullet::~Bullet()
-{
-}
+Bullet::~Bullet() = default;
 
 void Bullet::draw()
 {
@@ -37,6 +36,7 @@ void Bullet::update()
 {
 	if (getPosition().x >= 799)
 	{
+		setIsColliding(true);
 		setActive(false);
 		m_alpha = 0;
 	}
@@ -46,7 +46,7 @@ void Bullet::update()
 	}
 	if(m_pComet != nullptr)
 	{
-		Collision::squaredRadiusCheck(this, m_pComet);
+		//Collision::squaredRadiusCheck(this, m_pComet);
 	}
 }
 
@@ -72,6 +72,7 @@ bool Bullet::isActive()
 
 void Bullet::fire(glm::vec2 position)
 {
+	setIsColliding(false);
 	m_alpha = 255;
 	setPosition(position);
 	draw();

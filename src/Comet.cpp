@@ -41,7 +41,7 @@ void Comet::update()
 	if(getPosition().x <= 0)
 	{
 		currentPosition.x = 800;
-		currentPosition.y = Config::SCREEN_HEIGHT*0.5;
+		currentPosition.y = rand() % (600 - getHeight()) + getHeight()*0.5 + 1;
 		setPosition(currentPosition);
 	}
 	
@@ -50,7 +50,6 @@ void Comet::update()
 void Comet::clean()
 {
 	setIsColliding(false);
-	
 	setActive(false);
 }
 

@@ -17,11 +17,11 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 {
 	glm::vec2 P1 = object1->getPosition();
 	glm::vec2 P2 = object2->getPosition();
-	int halfWidth = (object1->getWidth() + object2->getWidth()) * 0.5f;
+	int halfHeights = (object1->getHeight() + object2->getHeight()) * 0.5f;
 
 	//if (glm::distance(P1, P2) < halfHeights) {
 
-	if (CollisionManager::squaredDistance(P1, P2) < (halfWidth * halfWidth)) {
+	if (CollisionManager::squaredDistance(P1, P2) < (halfHeights * halfHeights)) {
 		if (!object2->getIsColliding()) {
 
 			object2->setIsColliding(true);

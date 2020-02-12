@@ -1,22 +1,12 @@
-﻿  Comet.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+﻿  Level1Scene.cpp
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(79,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(80,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(26,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(27,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Template.vcxproj -> C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

@@ -40,8 +40,11 @@ void Level1Scene::update()
 	m_pShip->update();
 	m_pComet->update();
 	m_pBackground->update();
-	//Collision::squaredRadiusCheck(m_pShip->getBullet(), m_pComet);
-	
+	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
+	{
+		Collision::squaredRadiusCheck(m_pComet, m_pShip->mBullets[i]);
+	}
+	Collision::squaredRadiusCheck(m_pShip, m_pComet);
 
 	//std::cout << m_pBullet->getSpeed() << std::endl;
 	//updates bullet movement on x-axis
