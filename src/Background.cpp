@@ -70,7 +70,7 @@ void Background::update()
 	std::cout << currentPositionTemp.x << std::endl;
 	setPosition(currentPositionTemp);
 
-	if(getPosition().x == -260)
+	if(getPosition().x == -920)
 	{
 		setPosition(getStartingPosition());
 	}

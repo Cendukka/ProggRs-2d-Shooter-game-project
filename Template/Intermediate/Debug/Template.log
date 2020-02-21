@@ -1,12 +1,32 @@
-﻿  Level1Scene.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(79,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  Background.cpp
+D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\src\Background.cpp(12,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(80,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\src\Background.cpp(13,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\src\Background.cpp(19,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\src\Background.cpp(20,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\src\Background.cpp(37,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\src\Background.cpp(38,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Template.vcxproj -> D:\C++ Web Game Programming\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
