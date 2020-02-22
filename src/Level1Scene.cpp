@@ -2,6 +2,7 @@
 #include "Game.h"
 #include <iostream>
 #include "Background.h"
+#include "Background1.h"
 #include "CollisionManager.h"
 
 Level1Scene::Level1Scene()
@@ -18,6 +19,7 @@ void Level1Scene::draw()
 	//draws game objects
 	
 	m_pBackground->draw();
+	m_pBackground1->draw();
 	m_pShip->draw();
 	m_pComet->draw();
 	//m_pBullet->draw();
@@ -40,6 +42,7 @@ void Level1Scene::update()
 	m_pShip->update();
 	m_pComet->update();
 	m_pBackground->update();
+	m_pBackground1->update();
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		Collision::squaredRadiusCheck(m_pComet, m_pShip->mBullets[i]);
@@ -163,6 +166,7 @@ void Level1Scene::start()
 	m_pShip = new Ship();
 	m_pBullet = new Bullet();
 	m_pBackground = new Background();
+	m_pBackground1 = new Background1();
 	m_pComet = new Comet();
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
