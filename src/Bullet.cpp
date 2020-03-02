@@ -36,7 +36,7 @@ void Bullet::update()
 {
 	if (getPosition().x >= 799)
 	{
-		setIsColliding(true);
+		setIsColliding(false);
 		setActive(false);
 		m_alpha = 0;
 	}
@@ -58,6 +58,9 @@ void Bullet::setComet(Comet* pcomet)
 
 void Bullet::clean()
 {
+	setIsColliding(false);
+	setActive(false);
+	m_alpha = 0;
 }
 
 void Bullet::setActive(bool active)

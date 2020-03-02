@@ -34,12 +34,14 @@ void Comet::draw()
 
 void Comet::update()
 {
+	
 	glm::vec2 currentPosition = getPosition();
 	//currentPosition.x -= 2;
 	//setPosition(currentPosition);
 	move();
 	if(getPosition().x <= 0)
 	{
+		m_alpha = 255;
 		currentPosition.x = 800;
 		currentPosition.y = rand() % (600 - getHeight()) + getHeight()*0.5 + 1;
 		setPosition(currentPosition);
@@ -49,8 +51,10 @@ void Comet::update()
 
 void Comet::clean()
 {
+	
 	setIsColliding(false);
 	setActive(false);
+	m_alpha = 0;
 }
 
 void Comet::move()

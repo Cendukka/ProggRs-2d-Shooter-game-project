@@ -34,6 +34,8 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				break;
 			case BULLET:
 				std::cout << "Collision with Bullet!" << std::endl;
+				object1->clean();
+				object2->clean();
 				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;
 			default:
