@@ -87,7 +87,11 @@ void Level1Scene::handleEvents()
 			{
 			case SDL_BUTTON_LEFT:
 				//m_pBullet->fire(m_pShip->getPosition());
-				m_pShip->handleFiring();
+				
+				if (m_mouseRegister < 1) {
+					m_pShip->handleFiring();
+					m_mouseRegister = 1;
+				}
 				break;
 			}
 
@@ -97,6 +101,7 @@ void Level1Scene::handleEvents()
 			{
 			case SDL_BUTTON_LEFT:
 				//m_pStartButton->setMouseButtonClicked(false);
+				m_mouseRegister = 0;
 				break;
 			}
 			break;

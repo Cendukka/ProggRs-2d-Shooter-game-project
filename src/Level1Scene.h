@@ -31,7 +31,7 @@ private:
 
 	glm::vec2 m_mousePosition;
 
-
+	int m_mouseRegister;
 	Ship* m_pShip;
 	Bullet* m_pBullet;
 	Background* m_pBackground;

@@ -95,7 +95,7 @@ void StartScene::handleEvents()
 void StartScene::start()
 {
 	SDL_Color blue = { 0, 0, 255, 255 };
-	m_pStartLabel = new Label("START SCENE", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
+	m_pStartLabel = new Label("The Last Dream", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
 	m_pStartLabel->setParent(this);
 	addChild(m_pStartLabel);
 	m_pStartButton = new StartButton();
