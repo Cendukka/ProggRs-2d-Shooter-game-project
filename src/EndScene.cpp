@@ -17,7 +17,8 @@ EndScene::~EndScene()
 
 void EndScene::draw()
 {
-	m_Label->draw();
+	m_LabelGameOver->draw();
+	m_LabelNewGame->draw();
 }
 
 void EndScene::update()
@@ -26,7 +27,8 @@ void EndScene::update()
 
 void EndScene::clean()
 {
-	delete m_Label;
+	delete m_LabelGameOver;
+	delete m_LabelNewGame;
 	removeAllChildren();
 }
 
@@ -46,10 +48,8 @@ void EndScene::handleEvents()
 			case SDLK_ESCAPE:
 				TheGame::Instance()->quit();
 				break;
+			
 			case SDLK_1:
-				TheGame::Instance()->changeSceneState(SceneState::LEVEL1_SCENE);
-				break;
-			case SDLK_2:
 				TheGame::Instance()->changeSceneState(SceneState::START_SCENE);
 				break;
 			}
@@ -63,8 +63,11 @@ void EndScene::handleEvents()
 void EndScene::start()
 {
 	SDL_Color blue = { 0, 0, 255, 255 };
-	m_Label = new Label("END SCENE", "Dock51", 80, blue, glm::vec2(400.0f, 40.0f));
-	m_Label->setParent(this);
-	addChild(m_Label);
+	SDL_Color red = { 255, 0, 0, 255 };
+	m_LabelGameOver = new Label("GAME OVER", "Dock51", 80, blue, glm::vec2(400.0f, 40.0f));
+	m_LabelNewGame = new Label("Press \"1\" to Start again!", "Dock51", 30, red, glm::vec2(400.0f, 160.0f));
+	m_LabelGameOver->setParent(this);
+	m_LabelNewGame->setParent(this);
+	addChild(m_LabelGameOver);
+	addChild(m_LabelNewGame);
 }
-

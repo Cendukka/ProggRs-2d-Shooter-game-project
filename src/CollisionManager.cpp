@@ -1,6 +1,7 @@
 #include "CollisionManager.h"
 #include "Util.h"
 #include <algorithm>
+#include "ship.h"
 
 
 
@@ -34,10 +35,16 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				break;
 			case BULLET:
 				std::cout << "Collision with Bullet!" << std::endl;
-				object1->clean();
+				
 				object2->clean();
 				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;
+			case SHIP:
+				std::cout << "Collision with Ship!" << std::endl;
+				break;
+			case ENEMY:
+				std::cout << "Collision with Enemy!" << std::endl;
+				object1->clean();
 			default:
 				//std::cout << "Collision with unknown type!" << std::endl;
 				break;

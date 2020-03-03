@@ -39,12 +39,16 @@ public:
 	void handleFiring();
 	glm::vec2 getTarget();
 	void setTarget(glm::vec2 position);
+	void decreaseLife();
 private:
 
 	void m_checkState();
 	void m_checkBounds();
 
 	void m_reset();
+
+	//health
+	int m_health;
 
 	// steering behaviours
 	void m_seek();

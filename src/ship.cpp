@@ -23,6 +23,7 @@ Ship::Ship() :
 	setIsColliding(false);
 	setType(GameObjectType::SHIP);
 	setState(SteeringState::IDLE);
+	m_health = 2;
 
 	for (int i = 0; i < MAX_BULLETS; i++)
 	{
@@ -149,6 +150,16 @@ glm::vec2 Ship::getTarget()
 void Ship::setTarget(glm::vec2 position)
 {
 	m_target = position;
+}
+//decrease life when hit on comet and check the life at the same time
+void Ship::decreaseLife()
+{
+	m_health -= 1;
+
+	if(m_health <= 0)
+	{
+		TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
+	}
 }
 
 

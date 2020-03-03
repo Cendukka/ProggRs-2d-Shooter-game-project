@@ -9,6 +9,7 @@
 #include "Background.h"
 #include "Background1.h"
 #include "Comet.h"
+#include "SmallEnemy.h"
 
 class Level1Scene : public Scene
 {
@@ -21,6 +22,8 @@ public:
 	void clean() override;
 	void handleEvents() override;
 	void start() override;
+
+	
 
 	// getters
 	glm::vec2 getMousePosition();
@@ -37,6 +40,7 @@ private:
 	Background* m_pBackground;
 	Background1* m_pBackground1;
 	Comet* m_pComet;
+	SmallEnemy* m_pSmallEnemy;
 };
 
 #endif /* defined (__LEVEL_1_SCENE__) */

@@ -45,6 +45,7 @@ public:
 	void setState(SteeringState newState);
 	void setAcceleration(glm::vec2 newAcceleration);
 
+
 private:
 	// transform variables
 	glm::vec2 m_position;

@@ -22,6 +22,8 @@ void Level1Scene::draw()
 	m_pBackground1->draw();
 	m_pShip->draw();
 	m_pComet->draw();
+	m_pSmallEnemy->draw();
+	
 	//m_pBullet->draw();
 
 
@@ -43,11 +45,28 @@ void Level1Scene::update()
 	m_pComet->update();
 	m_pBackground->update();
 	m_pBackground1->update();
+	m_pSmallEnemy->update();
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		Collision::squaredRadiusCheck(m_pComet, m_pShip->mBullets[i]);
+		
+		if(Collision::squaredRadiusCheck(m_pShip->mBullets[i],m_pSmallEnemy))
+		{
+			m_pSmallEnemy->decreaseHealth();
+
+			if (m_pSmallEnemy->getHealth() <= 0) {
+				m_pSmallEnemy->clean();
+			}
+		};
 	}
-	Collision::squaredRadiusCheck(m_pShip, m_pComet);
+	//check if comet hits the ship
+	if(Collision::squaredRadiusCheck(m_pComet, m_pShip))
+	{
+		m_pShip->decreaseLife();
+		
+	}
+	
+	
 
 	//std::cout << m_pBullet->getSpeed() << std::endl;
 	//updates bullet movement on x-axis
@@ -173,6 +192,7 @@ void Level1Scene::start()
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 	m_pComet = new Comet();
+	m_pSmallEnemy = new SmallEnemy();
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		m_pShip->mBullets[i]->setComet(m_pComet);

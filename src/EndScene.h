@@ -20,7 +20,8 @@ public:
 
 
 private:
-	Label* m_Label;
+	Label* m_LabelGameOver;
+	Label* m_LabelNewGame;
 };
 
 #endif /* defined (__END_SCENE__) */
