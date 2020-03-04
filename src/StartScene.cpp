@@ -17,6 +17,8 @@ StartScene::~StartScene()
 
 void StartScene::draw()
 {
+	m_pBackground->draw();
+	m_pBackground1->draw();
 	m_pStartLabel->draw();
 	m_pStartButton->draw();
 	
@@ -24,8 +26,11 @@ void StartScene::draw()
 
 void StartScene::update()
 {
+	m_pBackground->update();
+	m_pBackground1->update();
 	m_pStartButton->setMousePosition(m_mousePosition);
 	m_pStartButton->ButtonClick();
+	
 }
 
 void StartScene::clean()
@@ -100,6 +105,12 @@ void StartScene::start()
 	addChild(m_pStartLabel);
 	m_pStartButton = new StartButton();
 	m_pStartButton->setMouseButtonClicked(false);
+
+	m_pBackground = new Background();
+	m_pBackground1 = new Background1();
+
+	addChild(m_pBackground);
+	addChild(m_pBackground1);
 
 	
 }

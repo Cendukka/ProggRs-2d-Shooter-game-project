@@ -4,6 +4,8 @@
 
 #include "Scene.h"
 #include "Label.h"
+#include "Background.h"
+#include "Background1.h"
 
 class EndScene : public Scene
 {
@@ -22,6 +24,8 @@ public:
 private:
 	Label* m_LabelGameOver;
 	Label* m_LabelNewGame;
+	Background* m_pBackground;
+	Background1* m_pBackground1;
 };
 
 #endif /* defined (__END_SCENE__) */

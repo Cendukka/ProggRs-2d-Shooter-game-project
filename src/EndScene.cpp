@@ -17,12 +17,16 @@ EndScene::~EndScene()
 
 void EndScene::draw()
 {
+	m_pBackground->draw();
+	m_pBackground1->draw();
 	m_LabelGameOver->draw();
 	m_LabelNewGame->draw();
 }
 
 void EndScene::update()
 {
+	m_pBackground->update();
+	m_pBackground1->update();
 }
 
 void EndScene::clean()
@@ -70,4 +74,10 @@ void EndScene::start()
 	m_LabelNewGame->setParent(this);
 	addChild(m_LabelGameOver);
 	addChild(m_LabelNewGame);
+
+	m_pBackground = new Background();
+	m_pBackground1 = new Background1();
+	
+	addChild(m_pBackground);
+	addChild(m_pBackground1);
 }

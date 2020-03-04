@@ -1,12 +1,559 @@
-﻿  Level1Scene.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(108,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  Background.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(109,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Background1.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(13,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(14,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(31,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(32,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Bullet.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Bullet.cpp(27,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Bullet.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Button.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(11,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(12,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(23,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(24,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(54,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(54,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(55,41): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(55,23): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(56,30): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(56,20): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(57,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Button.cpp(57,21): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+  Comet.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(30,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(31,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(69,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(70,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(73,35): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Comet.cpp(74,71): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  EndScene.cpp
+  Enemy.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(11,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(12,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(24,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(25,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(69,37): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(72,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(75,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Enemy.cpp(78,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  FontManager.cpp
+  Game.cpp
+  Label.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(16,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(17,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(54,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(55,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(75,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Label.cpp(76,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Level1Scene.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(108,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(109,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Mine.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(11,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(12,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(24,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Mine.cpp(25,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  SmallEnemy.cpp
+  StartButton.cpp
+  StartScene.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\StartScene.cpp(54,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\StartScene.cpp(55,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Util.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(227,15): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(228,15): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(244,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(276,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(277,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(278,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(279,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(284,59): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(284,52): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(284,45): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(284,36): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(290,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(291,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(292,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(293,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(296,24): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(297,24): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(310,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(311,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(312,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(313,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(318,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(332,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(332,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(333,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(333,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(334,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(334,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(335,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(335,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(339,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(339,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(340,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(340,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(341,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(341,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(342,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(342,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(346,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(346,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(347,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(347,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(348,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(348,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(349,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(349,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(353,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(353,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(354,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(354,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(355,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(355,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(356,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(356,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(360,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(360,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(361,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(361,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(362,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(362,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(363,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(363,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(364,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(364,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(365,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(365,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(366,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(366,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(367,57): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(367,43): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(394,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(395,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(400,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(410,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Util.cpp(419,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\main.cpp(28,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  ship.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(18,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(19,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(41,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(42,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\ship.cpp(194,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  Template.vcxproj -> C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
