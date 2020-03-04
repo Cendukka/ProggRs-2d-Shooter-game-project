@@ -49,6 +49,11 @@ void Enemy::setActive(bool active)
 	m_isActive = active;
 }
 
+void Enemy::setAlpha(Uint8 value)
+{
+	m_alpha = value;
+}
+
 bool Enemy::isActive()
 {
 	return m_isActive;

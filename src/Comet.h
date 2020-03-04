@@ -17,6 +17,8 @@ public:
 	void update() override;
 	void clean() override;
 	void move();
+	void reset();
+	void getDamage();
 	void setActive(bool active);
 	bool isActive();
 private:
@@ -24,6 +26,8 @@ private:
 	double m_currentDirection;
 	Uint8 m_alpha;
 	bool m_isActive;
+	int m_health;
+	int m_angle;
 };
 
 #endif

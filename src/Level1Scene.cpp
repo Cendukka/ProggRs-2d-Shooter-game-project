@@ -48,15 +48,16 @@ void Level1Scene::update()
 	m_pSmallEnemy->update();
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
-		Collision::squaredRadiusCheck(m_pComet, m_pShip->mBullets[i]);
+		
+		if(Collision::squaredRadiusCheck(m_pComet, m_pShip->mBullets[i]))
+		{
+			m_pShip->mBullets[i]->reset();
+			m_pComet->getDamage();
+		}
 		
 		if(Collision::squaredRadiusCheck(m_pShip->mBullets[i],m_pSmallEnemy))
 		{
 			m_pSmallEnemy->decreaseHealth();
-
-			if (m_pSmallEnemy->getHealth() <= 0) {
-				m_pSmallEnemy->clean();
-			}
 		};
 	}
 	//check if comet hits the ship
@@ -65,17 +66,6 @@ void Level1Scene::update()
 		m_pShip->decreaseLife();
 		
 	}
-	
-	
-
-	//std::cout << m_pBullet->getSpeed() << std::endl;
-	//updates bullet movement on x-axis
-	//m_pBullet->setPosition(glm::vec2((m_pBullet->getPosition().x + m_pBullet->getSpeed()), m_pBullet->getPosition().y));
-
-
-	//Bullet place is on the tip of the ship
-	//m_pBullet->setPosition(glm::vec2(m_pShip->getPosition().x+35.0f, m_pShip->getPosition().y));
-	//m_pBullet->setPosition(m_mousePosition);
 }
 
 
@@ -188,7 +178,6 @@ void Level1Scene::start()
 
 
 	m_pShip = new Ship();
-	m_pBullet = new Bullet();
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 	m_pComet = new Comet();
@@ -204,38 +193,3 @@ glm::vec2 Level1Scene::getMousePosition()
 	return m_mousePosition;
 }
 
-/*
-bool Level1Scene::m_MouseOver()
-{
-	float topLeftX = m_pStartButton->getPosition().x - m_pStartButton->getWidth() * 0.5;
-	float topLeftY = m_pStartButton->getPosition().y - m_pStartButton->getHeight() * 0.5;
-	float width = m_pStartButton->getWidth();
-	float height = m_pStartButton->getHeight();
-
-
-	if(m_mousePosition.x > topLeftX &&
-		m_mousePosition.x < topLeftX + width &&
-		m_mousePosition.y > topLeftY &&
-		m_mousePosition.y < topLeftY + height)
-	{
-		//std::cout << "Mouse Over!!" << std::endl;
-
-		m_pStartButton->setAlpha(178);
-		return true;
-	}
-	else
-	{
-		m_pStartButton->setAlpha(255);
-		return false;
-	}
-}
-
-void Level1Scene::m_MouseClick()
-{
-	if(m_MouseOver() && m_mouseClicked)
-	{
-		std::cout << "Mouse Button Clicked!" << std::endl;
-	}
-}
-
-*/

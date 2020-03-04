@@ -17,7 +17,7 @@ Bullet::Bullet()
 	setType(BULLET);
 	setSpeed(10.0f);
 	setActive(false);
-	m_alpha = 255;
+	m_alpha = 0;
 }
 
 Bullet::~Bullet() = default;
@@ -34,11 +34,9 @@ void Bullet::draw()
 
 void Bullet::update()
 {
-	if (getPosition().x >= 799)
+	if (getPosition().x >= Config::SCREEN_WIDTH + getWidth())
 	{
-		setIsColliding(false);
-		setActive(false);
-		m_alpha = 0;
+		reset();
 	}
 	if (isActive())
 	{
@@ -55,12 +53,18 @@ void Bullet::setComet(Comet* pcomet)
 	m_pComet = pcomet;
 }
 
+void Bullet::reset()
+{
+	setIsColliding(false);
+	setPosition(glm::vec2(0.0f, -getHeight()));
+	setActive(false);
+	m_alpha = 0;
+}
+
 
 void Bullet::clean()
 {
-	setIsColliding(false);
-	setActive(false);
-	m_alpha = 0;
+	reset();
 }
 
 void Bullet::setActive(bool active)

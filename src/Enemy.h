@@ -20,7 +20,7 @@ public:
 
 	void draw(int yEnemyPosition);
 	void setActive(bool active);
-
+	void setAlpha(Uint8 value);
 	bool isActive();
 
 	

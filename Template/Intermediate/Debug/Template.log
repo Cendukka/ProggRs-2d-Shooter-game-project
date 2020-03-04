@@ -1,29 +1,32 @@
-﻿  CollisionManager.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(10,15): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+﻿  Comet.cpp
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(11,15): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(21,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(69,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(70,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(71,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(72,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(93,4): warning C4065: switch statement contains 'default' but no 'case' labels
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(188,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(198,19): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(205,19): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
-              _Ty=float
+              T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(208,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(210,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  SmallEnemy.cpp
-  Generating Code...
-  Template.vcxproj -> C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(70,35): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(71,71): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

@@ -30,13 +30,14 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 			switch (object2->getType()) {
 			case COMET:
 				std::cout << "Collision with Comet!" << std::endl;
-				object2->clean();
+				//object2->clean();
+				return true;
 				//TheSoundManager::Instance()->playSound("yay", 0);
 				break;
 			case BULLET:
 				std::cout << "Collision with Bullet!" << std::endl;
 				
-				object2->clean();
+				return true;
 				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;
 			case SHIP:

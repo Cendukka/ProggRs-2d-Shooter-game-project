@@ -11,7 +11,9 @@ public:
 	SmallEnemy();
 	~SmallEnemy();
 
+	void update() override;
 	void decreaseHealth();
+	void clean() override;
 	int getHealth();
 
 private:

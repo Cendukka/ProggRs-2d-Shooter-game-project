@@ -30,6 +30,7 @@ public:
 	float getSpeed();
 	void checkBounds();
 	void setComet(Comet* pcomet);
+	void reset();
 
 private:
 
