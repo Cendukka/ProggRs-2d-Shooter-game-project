@@ -27,7 +27,8 @@ private:
 	Uint8 m_alpha;
 	bool m_isActive;
 	int m_health;
-	int m_angle;
+	float m_angle;
+	float m_rotationAngel;
 };
 
 #endif

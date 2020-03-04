@@ -21,7 +21,11 @@ void Level1Scene::draw()
 	m_pBackground->draw();
 	m_pBackground1->draw();
 	m_pShip->draw();
-	m_pComet->draw();
+	for (int i = 0; i < MAX_COMETS; i++)
+	{
+		m_pComets[i]->draw();
+	}
+	//m_pComet->draw();
 	m_pSmallEnemy->draw();
 	
 	//m_pBullet->draw();
@@ -42,18 +46,31 @@ void Level1Scene::update()
 		m_pShip->setPosition(m_mousePosition);
 	}
 	m_pShip->update();
-	m_pComet->update();
+	//m_pComet->update();
+	for (int i = 0; i < MAX_COMETS; i++)
+	{
+		m_pComets[i]->update();
+	}
 	m_pBackground->update();
 	m_pBackground1->update();
 	m_pSmallEnemy->update();
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
-		
-		if(Collision::squaredRadiusCheck(m_pComet, m_pShip->mBullets[i]))
+		for(int i = 0; i < MAX_COMETS; i++)
 		{
-			m_pShip->mBullets[i]->reset();
-			m_pComet->getDamage();
+			if (Collision::squaredRadiusCheck(m_pComets[i], m_pShip->mBullets[i]))
+			{
+				m_pShip->mBullets[i]->reset();
+				m_pComets[i]->getDamage();
+			}
+			if (Collision::squaredRadiusCheck(m_pShip, m_pComets[i]))
+			{
+				m_pShip->decreaseLife();
+				m_pComets[i]->reset();
+
+			}
 		}
+
 		
 		if(Collision::squaredRadiusCheck(m_pShip->mBullets[i],m_pSmallEnemy))
 		{
@@ -61,11 +78,11 @@ void Level1Scene::update()
 		};
 	}
 	//check if comet hits the ship
-	if(Collision::squaredRadiusCheck(m_pComet, m_pShip))
-	{
-		m_pShip->decreaseLife();
-		
-	}
+	//for (int i = 0; i < MAX_COMETS; i++)
+	//{
+
+	//}
+
 }
 
 
@@ -180,11 +197,11 @@ void Level1Scene::start()
 	m_pShip = new Ship();
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
-	m_pComet = new Comet();
+	//m_pComet = new Comet();
 	m_pSmallEnemy = new SmallEnemy();
-	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
+	for(int i = 0; i < MAX_COMETS; i++)
 	{
-		m_pShip->mBullets[i]->setComet(m_pComet);
+		m_pComets[i] = new Comet();
 	}
 }
 

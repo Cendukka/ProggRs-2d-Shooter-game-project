@@ -17,6 +17,8 @@ Comet::Comet()
 	setType(GameObjectType::COMET);
 	m_health = 2;
 	m_angle = 0;
+	m_rotationAngel = 0;
+	reset();
 }
 
 Comet::~Comet()
@@ -39,7 +41,7 @@ void Comet::update()
 	
 	glm::vec2 currentPosition = getPosition();
 	move();
-	if(getPosition().x <= 0 - getWidth())
+	if (getPosition().x <= 0 - getWidth())
 	{
 		reset();
 	}
@@ -48,7 +50,7 @@ void Comet::update()
 		reset();
 		m_health = 2;
 	}
-	m_angle += 1;
+	m_angle += m_rotationAngel;
 	
 }
 
@@ -64,6 +66,7 @@ void Comet::move()
 
 void Comet::reset()
 {
+	m_rotationAngel = 0.1 * ((rand() % 10) + 1);
 	m_angle = (rand() % 179) + 1;
 	glm::vec2 currentPosition = getPosition();
 	m_alpha = 255;

@@ -22,6 +22,7 @@ public:
 	void clean() override;
 	void handleEvents() override;
 	void start() override;
+	static const int MAX_COMETS = 5;
 
 	
 
@@ -39,7 +40,8 @@ private:
 	Bullet* m_pBullet;
 	Background* m_pBackground;
 	Background1* m_pBackground1;
-	Comet* m_pComet;
+	//Comet* m_pComet;
+	Comet* m_pComets[MAX_COMETS];
 	SmallEnemy* m_pSmallEnemy;
 };
 

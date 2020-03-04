@@ -1,30 +1,10 @@
-﻿  Comet.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+﻿  Level1Scene.cpp
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(108,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(70,35): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Comet.cpp(71,71): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(109,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
