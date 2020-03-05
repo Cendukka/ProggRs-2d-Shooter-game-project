@@ -8,6 +8,9 @@ enum SceneState
 	LEVEL1_SCENE,
 	PLAY_SCENE,
 	END_SCENE,
+	NEXT_LEVEL_SCENE,
+	LEVEL_TWO,
+	LEVEL_THREE,	
 	NUM_OF_SCENES
 };
 #endif /* defined (__SCENE_STATE__) */
