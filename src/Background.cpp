@@ -5,7 +5,7 @@
 Background::Background()
 {
 
-	TheTextureManager::Instance()->load("../Assets/BG1.png","level1Scene1", TheGame::Instance()->getRenderer());
+	TheTextureManager::Instance()->load("../Assets/BG2.png","level1Scene1", TheGame::Instance()->getRenderer());
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("level1Scene1");
 	setWidth(size.x);
 	setHeight(size.y);
@@ -36,16 +36,16 @@ void Background::draw()
 
 void Background::update()
 {
-	//update the position of the backgroud
+	//update the position of the background
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("level1Scene1");
 	glm::vec2 currentPositionTemp = getPosition();
 	currentPositionTemp.x -= getFlowingSpeed();
-	std::cout << currentPositionTemp.x << std::endl;
+	std::cout << size.x << std::endl;
 	setPosition(currentPositionTemp);
 	//reset the background position if the current x position is -texture size
 	if(getPosition().x ==  -(size.x*0.5))
 	{
-		setPosition(glm::vec2(getStartingPosition().x+size.x, getStartingPosition().y));
+		setPosition(glm::vec2(getStartingPosition().x + getWidth() , getStartingPosition().y));
 	}
 }
 

@@ -8,7 +8,7 @@ Background1::Background1()
 	
 
 
-	TheTextureManager::Instance()->load("../Assets/BG1.png", "level1Scene2", TheGame::Instance()->getRenderer());
+	TheTextureManager::Instance()->load("../Assets/BG2.png", "level1Scene2", TheGame::Instance()->getRenderer());
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("level1Scene2");
 	setWidth(size.x);
 	setHeight(size.y);
