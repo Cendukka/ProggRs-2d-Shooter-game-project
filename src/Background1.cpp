@@ -43,7 +43,7 @@ void Background1::update()
 	//update the current position of the background
 	glm::vec2 currentPositionTemp = getPosition();
 	currentPositionTemp.x -= getFlowingSpeed();
-	std::cout << currentPositionTemp.x << std::endl;
+	//std::cout << currentPositionTemp.x << std::endl;
 	setPosition(currentPositionTemp);
 	//reset the background position if the current x position is -texture size
 	if (getPosition().x == -(size.x * 0.5))

@@ -1,44 +1,12 @@
-﻿  Background.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+﻿  Level1Scene.cpp
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(114,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(115,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Background1.cpp
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(13,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(14,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(31,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\src\Background1.cpp(32,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Generating Code...
   Template.vcxproj -> C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

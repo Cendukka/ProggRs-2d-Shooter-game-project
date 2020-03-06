@@ -26,11 +26,12 @@ void Level1Scene::draw()
 		m_pComets[i]->draw();
 	}
 	//m_pComet->draw();
-	m_pSmallEnemy->draw();
+	for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	{
+		m_pSmallEnemies[i]->draw(i);
+	}
+	m_pMediumBoss->draw();
 	
-	//m_pBullet->draw();
-
-
 }
 
 void Level1Scene::update()
@@ -46,14 +47,14 @@ void Level1Scene::update()
 		m_pShip->setPosition(m_mousePosition);
 	}
 	m_pShip->update();
-	//m_pComet->update();
+	
 	for (int i = 0; i < MAX_COMETS; i++)
 	{
 		m_pComets[i]->update();
 	}
-	m_pBackground->update();
-	m_pBackground1->update();
-	m_pSmallEnemy->update();
+	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+		m_pSmallEnemies[i]->update();
+	}
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		for(int i = 0; i < MAX_COMETS; i++)
@@ -71,17 +72,22 @@ void Level1Scene::update()
 			}
 		}
 
-		
-		if(Collision::squaredRadiusCheck(m_pShip->mBullets[i],m_pSmallEnemy))
-		{
-			m_pSmallEnemy->decreaseHealth();
-		};
+		for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[i]))
+			{
+				m_pSmallEnemies[i]->decreaseHealth();
+				m_pShip->mBullets[i]->reset();
+			}
+			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))
+			{
+				m_pMediumBoss->decreaseHealth();
+				m_pShip->mBullets[i]->reset();
+			}
+		}
 	}
-	//check if comet hits the ship
-	//for (int i = 0; i < MAX_COMETS; i++)
-	//{
-
-	//}
+	m_pBackground->update();
+	m_pBackground1->update();
+	m_pMediumBoss->update();
 
 }
 
@@ -200,8 +206,16 @@ void Level1Scene::start()
 	m_pShip = new Ship();
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
-	//m_pComet = new Comet();
-	m_pSmallEnemy = new SmallEnemy();
+	m_pMediumBoss = new MediumBoss();
+
+	//Creates 3 small enemies
+	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	{
+		int position = 150*(i+1);
+		m_pSmallEnemies[i] = new SmallEnemy(position);
+		std::cout << m_pSmallEnemies[i]->getPosition().x << " " << m_pSmallEnemies[i]->getPosition().y << std::endl;
+	}
+	
 	for(int i = 0; i < MAX_COMETS; i++)
 	{
 		m_pComets[i] = new Comet();

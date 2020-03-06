@@ -10,6 +10,7 @@
 #include "Background1.h"
 #include "Comet.h"
 #include "SmallEnemy.h"
+#include "MediumBoss.h"
 
 class Level1Scene : public Scene
 {
@@ -23,6 +24,7 @@ public:
 	void handleEvents() override;
 	void start() override;
 	static const int MAX_COMETS = 5;
+	static const int MAX_SMALL_ENEMIES = 3;
 
 	
 
@@ -42,7 +44,8 @@ private:
 	Background1* m_pBackground1;
 	//Comet* m_pComet;
 	Comet* m_pComets[MAX_COMETS];
-	SmallEnemy* m_pSmallEnemy;
+	SmallEnemy* m_pSmallEnemies[MAX_SMALL_ENEMIES];
+	MediumBoss* m_pMediumBoss;
 };
 
 #endif /* defined (__LEVEL_1_SCENE__) */

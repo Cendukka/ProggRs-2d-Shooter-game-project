@@ -8,11 +8,11 @@
 class SmallEnemy : public Enemy
 {
 public:
-	SmallEnemy();
+	SmallEnemy(int theYPosition);
 	~SmallEnemy();
 
 	void update() override;
-	void decreaseHealth();
+	void decreaseHealth() override;
 	void clean() override;
 	int getHealth();
 

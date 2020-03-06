@@ -177,6 +177,7 @@
     <ClCompile Include="..\src\Label.cpp" />
     <ClCompile Include="..\src\Level1Scene.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\MediumBoss.cpp" />
     <ClCompile Include="..\src\Mine.cpp" />
     <ClCompile Include="..\src\NextLevelButton.cpp" />
     <ClCompile Include="..\src\NextLevelScene.cpp" />
@@ -213,6 +214,7 @@
     <ClInclude Include="..\src\GameObjectType.h" />
     <ClInclude Include="..\src\Label.h" />
     <ClInclude Include="..\src\Level1Scene.h" />
+    <ClInclude Include="..\src\MediumBoss.h" />
     <ClInclude Include="..\src\Mine.h" />
     <ClInclude Include="..\src\NextLevelButton.h" />
     <ClInclude Include="..\src\NextLevelScene.h" />
