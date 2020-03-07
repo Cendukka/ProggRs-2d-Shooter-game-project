@@ -1,11 +1,12 @@
 #pragma once
-#pragma once
 #ifndef _NEXT_LEVEL_SCENE__
 #define _NEXT_LEVEL_SCENE__
 
 #include "Scene.h"
 #include "NextLevelButton.h"
 #include "Label.h"
+#include "Background.h"
+#include "Background1.h"
 
 class NextLevelScene : public Scene
 {
@@ -30,6 +31,8 @@ private:
 
 	glm::vec2 m_mousePosition;
 
+	Background* m_pBackground;
+	Background1* m_pBackground1;
 	NextLevelButton* m_pNextLevelButton;
 };
 

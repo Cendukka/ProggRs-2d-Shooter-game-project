@@ -17,6 +17,8 @@ NextLevelScene::~NextLevelScene()
 
 void NextLevelScene::draw()
 {
+	m_pBackground->draw();
+	m_pBackground1->draw();
 	m_pNextLevelLabel->draw();
 	m_pNextLevelButton->draw();
 
@@ -24,6 +26,9 @@ void NextLevelScene::draw()
 
 void NextLevelScene::update()
 {
+
+	m_pBackground->update();
+	m_pBackground1->update();
 	m_pNextLevelButton->setMousePosition(m_mousePosition);
 	m_pNextLevelButton->ButtonClick();
 }
@@ -97,15 +102,19 @@ void NextLevelScene::handleEvents()
 // this function is used for initialization
 void NextLevelScene::start()
 {
-	SDL_Color blue = { 0, 0, 255, 255 };
-	m_pNextLevelLabel = new Label("Move To Next Level", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
-	//m_pNextLevelLabel = new Label("Go BA", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
+	SDL_Color colorr = { 255,255,255 };
+	m_pNextLevelLabel = new Label("Move To Next Level", "Consolas", 60, colorr, glm::vec2(400.0f, 40.0f));
 	m_pNextLevelLabel->setParent(this);
 	addChild(m_pNextLevelLabel);
 	m_pNextLevelButton = new NextLevelButton();
 	m_pNextLevelButton->setMouseButtonClicked(false);
-	//addChild(m_pNextLevelLabel);
-	//addChild(m_pNextLevelButton);
+	
+	
+	m_pBackground = new Background();
+	m_pBackground1 = new Background1();
+
+	addChild(m_pBackground);
+	addChild(m_pBackground1);
 
 
 }
