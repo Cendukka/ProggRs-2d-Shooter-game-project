@@ -2,7 +2,7 @@
 #include "Util.h"
 #include <algorithm>
 #include "ship.h"
-
+#include "ScoreBoardManager.h"
 
 
 int CollisionManager::squaredDistance(glm::vec2 P1, glm::vec2 P2)
@@ -30,13 +30,14 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 			switch (object2->getType()) {
 			case COMET:
 				std::cout << "Collision with Comet!" << std::endl;
+				ScoreBoardManager::Instance()->setHealth(ScoreBoardManager::Instance()->getHealth() -4);
 				//object2->clean();
 				return true;
-				//TheSoundManager::Instance()->playSound("yay", 0);
+				TheSoundManager::Instance()->playSound("boom", 0);
 				break;
 			case BULLET:
 				std::cout << "Collision with Bullet!" << std::endl;
-				
+				ScoreBoardManager::Instance()->setScore(ScoreBoardManager::Instance()->getScore() +100);
 				return true;
 				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;

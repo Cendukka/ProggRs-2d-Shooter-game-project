@@ -19,9 +19,6 @@
     <Filter Include="ImGui_SDL">
       <UniqueIdentifier>{e268ee36-f253-4e8a-beb9-edc75359b1d8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scenes">
-      <UniqueIdentifier>{5815f7db-2606-4a9a-bb95-88dfabdda6c1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game Objects">
       <UniqueIdentifier>{4df01ff0-0e04-4c4d-ac5d-b7efa07fd705}</UniqueIdentifier>
     </Filter>
@@ -30,6 +27,9 @@
     </Filter>
     <Filter Include="Enums">
       <UniqueIdentifier>{c00e61a2-9515-4297-a699-76a9a5f3005e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{5815f7db-2606-4a9a-bb95-88dfabdda6c1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +128,9 @@
     </ClCompile>
     <ClCompile Include="..\src\MediumBoss.cpp">
       <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ScoreBoardManager.cpp">
+      <Filter>Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +247,9 @@
     </ClInclude>
     <ClInclude Include="..\src\MediumBoss.h">
       <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ScoreBoardManager.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

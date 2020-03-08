@@ -182,6 +182,7 @@
     <ClCompile Include="..\src\NextLevelButton.cpp" />
     <ClCompile Include="..\src\NextLevelScene.cpp" />
     <ClCompile Include="..\src\Scene.cpp" />
+    <ClCompile Include="..\src\ScoreBoardManager.cpp" />
     <ClCompile Include="..\src\ship.cpp" />
     <ClCompile Include="..\src\SmallEnemy.cpp" />
     <ClCompile Include="..\src\SoundManager.cpp" />
@@ -220,6 +221,7 @@
     <ClInclude Include="..\src\NextLevelScene.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\SceneState.h" />
+    <ClInclude Include="..\src\ScoreBoardManager.h" />
     <ClInclude Include="..\src\ShapeType.h" />
     <ClInclude Include="..\src\ship.h" />
     <ClInclude Include="..\src\SmallEnemy.h" />

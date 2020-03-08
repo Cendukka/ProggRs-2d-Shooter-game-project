@@ -4,6 +4,8 @@
 #include "Background.h"
 #include "Background1.h"
 #include "CollisionManager.h"
+#include "ScoreBoardManager.h"
+
 
 Level1Scene::Level1Scene()
 {
@@ -19,7 +21,7 @@ void Level1Scene::draw()
 	//draws game objects
 	m_pBackground->draw();
 	m_pBackground1->draw();
-	m_pLabel->draw();
+	//m_pLabel->draw();
 	m_pShip->draw();
 	for (int i = 0; i < MAX_COMETS; i++)
 	{
@@ -31,7 +33,7 @@ void Level1Scene::draw()
 	//	m_pSmallEnemies[i]->draw(i);
 	//}
 	//m_pMediumBoss->draw();
-	
+	ScoreBoardManager::Instance()->Draw();
 }
 
 void Level1Scene::update()
@@ -92,7 +94,7 @@ void Level1Scene::update()
 	m_pBackground->update();
 	m_pBackground1->update();
 	m_pMediumBoss->update();
-	m_pLabel->setText("SCORE: " + std::to_string(TheGame::Instance()->getScore()));
+	//m_pLabel->setText("SCORE: " + std::to_string(TheGame::Instance()->getScore()));
 
 }
 
@@ -153,6 +155,8 @@ void Level1Scene::handleEvents()
 				break;
 			case SDLK_1:
 				TheGame::Instance()->changeSceneState(SceneState::START_SCENE);
+				ScoreBoardManager::Instance()->setHealth(100);
+				ScoreBoardManager::Instance()->setScore(0);
 				break;
 			case SDLK_2:
 				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
@@ -212,9 +216,9 @@ void Level1Scene::start()
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 	m_pMediumBoss = new MediumBoss();
-	SDL_Color color = { 255, 0, 0, 255 };
-	m_pLabel = new Label("SCORE: 9999", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
-
+	//SDL_Color color = { 255, 0, 0, 255 };
+	//m_pLabel = new Label("", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
+	ScoreBoardManager::Instance()->Start();
 	//Creates 3 small enemies
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
@@ -227,6 +231,7 @@ void Level1Scene::start()
 	{
 		m_pComets[i] = new Comet();
 	}
+	ScoreBoardManager::Instance()->Start();
 }
 
 glm::vec2 Level1Scene::getMousePosition()

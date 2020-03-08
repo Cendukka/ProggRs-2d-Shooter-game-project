@@ -1,12 +1,2 @@
-﻿  NextLevelScene.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(54,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(55,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+﻿  ScoreBoardManager.cpp
+  Template.vcxproj -> G:\Semester 4 - Web Game Programming with C++\Grp Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
