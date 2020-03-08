@@ -23,7 +23,7 @@ Ship::Ship() :
 	setIsColliding(false);
 	setType(GameObjectType::SHIP);
 	setState(SteeringState::IDLE);
-	m_health = 2;
+	m_health = 5;
 
 	for (int i = 0; i < MAX_BULLETS; i++)
 	{

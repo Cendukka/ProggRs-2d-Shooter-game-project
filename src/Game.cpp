@@ -14,6 +14,7 @@ Game::Game() :
 	m_pWindow(NULL), m_pRenderer(NULL), m_currentFrame(0), m_currentScene(NULL), m_bRunning(true), m_currentSceneState(SceneState::NO_SCENE), m_frames(0)
 {
 	srand((unsigned)time(NULL));  // random seed
+	m_score = 0;
 
 	
 }
@@ -22,6 +23,16 @@ Game::~Game()
 {
 }
 
+
+void Game::setScore(int value)
+{
+	m_score += value;
+}
+
+int Game::getScore()
+{
+	return m_score;
+}
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {

@@ -102,7 +102,7 @@ void NextLevelScene::handleEvents()
 // this function is used for initialization
 void NextLevelScene::start()
 {
-	SDL_Color colorr = { 255,255,255 };
+	SDL_Color colorr = { 255,255,255, 255 };
 	m_pNextLevelLabel = new Label("Move To Next Level", "Consolas", 60, colorr, glm::vec2(400.0f, 40.0f));
 	m_pNextLevelLabel->setParent(this);
 	addChild(m_pNextLevelLabel);

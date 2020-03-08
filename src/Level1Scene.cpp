@@ -17,25 +17,29 @@ Level1Scene::~Level1Scene()
 void Level1Scene::draw()
 {
 	//draws game objects
-	
 	m_pBackground->draw();
 	m_pBackground1->draw();
+	m_pLabel->draw();
 	m_pShip->draw();
 	for (int i = 0; i < MAX_COMETS; i++)
 	{
 		m_pComets[i]->draw();
 	}
 	//m_pComet->draw();
-	for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
-	{
-		m_pSmallEnemies[i]->draw(i);
-	}
-	m_pMediumBoss->draw();
+	//for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	//{
+	//	m_pSmallEnemies[i]->draw(i);
+	//}
+	//m_pMediumBoss->draw();
 	
 }
 
 void Level1Scene::update()
 {
+	if(TheGame::Instance()->getScore() >= 5000)
+	{
+		TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
+	}
 	//ship follows the mouse
 	//also checks that ship won't go over half of the screen
 	if (m_mousePosition.x > (Config::SCREEN_WIDTH * 0.5f))
@@ -57,37 +61,38 @@ void Level1Scene::update()
 	}
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
-		for(int i = 0; i < MAX_COMETS; i++)
+		for(int j = 0; j < MAX_COMETS; j++)
 		{
-			if (Collision::squaredRadiusCheck(m_pComets[i], m_pShip->mBullets[i]))
+			if (Collision::squaredRadiusCheck(m_pComets[j], m_pShip->mBullets[i]))
 			{
 				m_pShip->mBullets[i]->reset();
-				m_pComets[i]->getDamage();
+				m_pComets[j]->getDamage();
 			}
-			if (Collision::squaredRadiusCheck(m_pShip, m_pComets[i]))
+			if (Collision::squaredRadiusCheck(m_pShip, m_pComets[j]))
 			{
 				m_pShip->decreaseLife();
-				m_pComets[i]->reset();
+				m_pComets[j]->reset();
 
 			}
 		}
 
-		for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
-			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[i]))
-			{
-				m_pSmallEnemies[i]->decreaseHealth();
-				m_pShip->mBullets[i]->reset();
-			}
-			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))
-			{
-				m_pMediumBoss->decreaseHealth();
-				m_pShip->mBullets[i]->reset();
-			}
-		}
+		//for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+		//	if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[i]))
+		//	{
+		//		m_pSmallEnemies[i]->decreaseHealth();
+		//		m_pShip->mBullets[i]->reset();
+		//	}
+		//	if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))
+		//	{
+		//		m_pMediumBoss->decreaseHealth();
+		//		m_pShip->mBullets[i]->reset();
+		//	}
+		//}
 	}
 	m_pBackground->update();
 	m_pBackground1->update();
 	m_pMediumBoss->update();
+	m_pLabel->setText("SCORE: " + std::to_string(TheGame::Instance()->getScore()));
 
 }
 
@@ -207,6 +212,8 @@ void Level1Scene::start()
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 	m_pMediumBoss = new MediumBoss();
+	SDL_Color color = { 255, 0, 0, 255 };
+	m_pLabel = new Label("SCORE: 9999", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
 
 	//Creates 3 small enemies
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)

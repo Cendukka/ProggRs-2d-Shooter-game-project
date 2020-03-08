@@ -46,6 +46,7 @@ private:
 	Comet* m_pComets[MAX_COMETS];
 	SmallEnemy* m_pSmallEnemies[MAX_SMALL_ENEMIES];
 	MediumBoss* m_pMediumBoss;
+	Label* m_pLabel;
 };
 
 #endif /* defined (__LEVEL_1_SCENE__) */
