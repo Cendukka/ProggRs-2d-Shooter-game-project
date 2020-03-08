@@ -1,15 +1,16 @@
 #pragma once
 
-#ifndef __SMALL_ENEMY__
-#define __SMALL_ENEMY__
+#ifndef __MEDIUM_BOSS__
+#define __MEDIUM_BOSS__
+
 #include "Enemy.h"
 
 
-class SmallEnemy : public Enemy
+class MediumBoss : public Enemy
 {
 public:
-	SmallEnemy(int theYPosition);
-	~SmallEnemy();
+	MediumBoss();
+	~MediumBoss();
 
 	void update() override;
 	void decreaseHealth() override;

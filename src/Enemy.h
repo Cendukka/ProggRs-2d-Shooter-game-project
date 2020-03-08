@@ -22,6 +22,7 @@ public:
 	void setActive(bool active);
 	void setAlpha(Uint8 value);
 	bool isActive();
+	virtual void decreaseHealth() = 0;
 
 	
 private:

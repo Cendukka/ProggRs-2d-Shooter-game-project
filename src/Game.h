@@ -24,6 +24,7 @@
 // Scenes
 #include "StartScene.h"
 #include "Level1Scene.h"
+#include "NextLevelScene.h"
 #include "EndScene.h"
 
 class Game
@@ -44,6 +45,8 @@ public:
 
 	// simply set the running variable to true
 	void init() { m_bRunning = true; }
+	void setScore(int value);
+	int getScore();
 
 	bool init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 
@@ -76,6 +79,8 @@ private:
 	int m_currentFrame;
 
 	bool m_bRunning;
+
+	int m_score;
 
 	static Game* s_pInstance;
 	

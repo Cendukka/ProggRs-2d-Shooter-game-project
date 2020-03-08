@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  imgui.cpp
   imgui_demo.cpp
   imgui_draw.cpp
@@ -5,15 +6,24 @@
   imgui_sdl.cpp
   Background.cpp
 G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\Background.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+=======
+﻿  NextLevelScene.cpp
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(54,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+>>>>>>> c4e5fc5c93f57109cf202750f027b7cb453c2a40
           with
           [
               T=float
           ]
+<<<<<<< HEAD
 G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\Background.cpp(11,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+=======
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(55,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+>>>>>>> c4e5fc5c93f57109cf202750f027b7cb453c2a40
           with
           [
               T=float
           ]
+<<<<<<< HEAD
 G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\Background.cpp(28,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
@@ -628,3 +638,6 @@ G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\sr
   Generating Code...
   LINK : G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe not found or not built by the last incremental link; performing full link
   Template.vcxproj -> G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+=======
+  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+>>>>>>> c4e5fc5c93f57109cf202750f027b7cb453c2a40

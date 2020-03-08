@@ -56,7 +56,7 @@ void Bullet::setComet(Comet* pcomet)
 void Bullet::reset()
 {
 	setIsColliding(false);
-	setPosition(glm::vec2(0.0f, -getHeight()));
+	setPosition(glm::vec2(-getWidth(), -getHeight()));
 	setActive(false);
 	m_alpha = 0;
 }
@@ -64,7 +64,7 @@ void Bullet::reset()
 
 void Bullet::clean()
 {
-	reset();
+	//reset();
 }
 
 void Bullet::setActive(bool active)

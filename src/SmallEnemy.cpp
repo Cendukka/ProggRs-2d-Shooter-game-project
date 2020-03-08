@@ -1,11 +1,11 @@
 #include  "SmallEnemy.h"
 #include "Game.h"
 
-SmallEnemy::SmallEnemy()
+SmallEnemy::SmallEnemy(int theYPosition)
 	:Enemy(
-	"../Assets/Ship_01/Enemy.png",
+	"../Assets/Ship_01/SmallEnemy.png",
 	"smallEnemy",
-	ENEMY, glm::vec2(Config::SCREEN_WIDTH, 300.0f))
+	ENEMY, glm::vec2(Config::SCREEN_WIDTH, theYPosition))
 {
 	m_health = 5;
 }
