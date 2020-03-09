@@ -1,5 +1,6 @@
 #include  "SmallEnemy.h"
 #include "Game.h"
+#include "ScoreBoardManager.h"
 
 SmallEnemy::SmallEnemy(int theYPosition)
 	:Enemy(
@@ -30,6 +31,10 @@ void SmallEnemy::update()
 void SmallEnemy::decreaseHealth()
 {
 	m_health -= 1;
+	if (m_health <= 0) {
+		//increas the score when enemy dies
+		ScoreBoardManager::Instance()->setScore(ScoreBoardManager::Instance()->getScore() + 300);
+	}
 }
 
 void SmallEnemy::clean()

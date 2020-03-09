@@ -32,6 +32,7 @@ int ScoreBoardManager::getScore() const
 void ScoreBoardManager::setScore(const int new_score)
 {
 	m_score = new_score;
+	std::cout << m_score << std::endl;
 	m_pScoreLabel->setText("Score: " + std::to_string(m_score));
 }
 

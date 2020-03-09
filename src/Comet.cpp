@@ -74,7 +74,6 @@ void Comet::reset()
 	currentPosition.y = rand() % (600 - getHeight()) + getHeight() * 0.5 + 1;
 	if(m_health <= 0)
 	{
-		TheGame::Instance()->setScore(100);
 		currentPosition.x += 250.0f;
 	}
 	setPosition(currentPosition);

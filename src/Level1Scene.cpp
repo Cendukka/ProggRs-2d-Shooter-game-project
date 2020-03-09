@@ -28,18 +28,22 @@ void Level1Scene::draw()
 		m_pComets[i]->draw();
 	}
 	//m_pComet->draw();
-	//for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
-	//{
-	//	m_pSmallEnemies[i]->draw(i);
-	//}
+
+	//Draws small enemies
+	/*for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	{
+		m_pSmallEnemies[i]->draw(i);
+	}*/
 	//m_pMediumBoss->draw();
 	ScoreBoardManager::Instance()->Draw();
 }
 
 void Level1Scene::update()
 {
-	if(TheGame::Instance()->getScore() >= 5000)
+	
+	if(ScoreBoardManager::Instance()->getScore() >= 5000)
 	{
+		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
 		TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
 	}
 	//ship follows the mouse
@@ -58,9 +62,9 @@ void Level1Scene::update()
 	{
 		m_pComets[i]->update();
 	}
-	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+	/*for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 		m_pSmallEnemies[i]->update();
-	}
+	}*/
 	for(int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		for(int j = 0; j < MAX_COMETS; j++)
@@ -77,13 +81,15 @@ void Level1Scene::update()
 
 			}
 		}
-
-		//for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
-		//	if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[i]))
-		//	{
-		//		m_pSmallEnemies[i]->decreaseHealth();
-		//		m_pShip->mBullets[i]->reset();
-		//	}
+		//Update enemies and check collision
+	/*	for (int k = 0; k < MAX_SMALL_ENEMIES; k++) {
+			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[k]))
+			{
+				m_pSmallEnemies[k]->decreaseHealth();
+				m_pShip->mBullets[i]->reset();
+				
+			}*/
+		
 		//	if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))
 		//	{
 		//		m_pMediumBoss->decreaseHealth();
@@ -158,12 +164,12 @@ void Level1Scene::handleEvents()
 				ScoreBoardManager::Instance()->setHealth(100);
 				ScoreBoardManager::Instance()->setScore(0);
 				break;
-			case SDLK_2:
+			/*case SDLK_2:
 				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
 				break;
 			case SDLK_3:
 				TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
-				break;
+				break;*/
 
 				/************************************************************************/
 			case SDLK_w:
@@ -220,12 +226,12 @@ void Level1Scene::start()
 	//m_pLabel = new Label("", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
 	ScoreBoardManager::Instance()->Start();
 	//Creates 3 small enemies
-	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	/*for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
 		int position = 150*(i+1);
 		m_pSmallEnemies[i] = new SmallEnemy(position);
 		std::cout << m_pSmallEnemies[i]->getPosition().x << " " << m_pSmallEnemies[i]->getPosition().y << std::endl;
-	}
+	}*/
 	
 	for(int i = 0; i < MAX_COMETS; i++)
 	{

@@ -32,13 +32,12 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				std::cout << "Collision with Comet!" << std::endl;
 				ScoreBoardManager::Instance()->setHealth(ScoreBoardManager::Instance()->getHealth() -4);
 				//object2->clean();
-				return true;
 				TheSoundManager::Instance()->playSound("boom", 0);
 				break;
 			case BULLET:
 				std::cout << "Collision with Bullet!" << std::endl;
 				ScoreBoardManager::Instance()->setScore(ScoreBoardManager::Instance()->getScore() +100);
-				return true;
+				
 				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;
 			case SHIP:
@@ -46,6 +45,7 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				break;
 			case ENEMY:
 				std::cout << "Collision with Enemy!" << std::endl;
+				
 				object1->clean();
 			default:
 				//std::cout << "Collision with unknown type!" << std::endl;
