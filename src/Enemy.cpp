@@ -62,7 +62,7 @@ bool Enemy::isActive()
 void Enemy::draw(int yEnemyPosition)
 {
 	
-	int yComponent;
+	int yComponent{};
 	switch(yEnemyPosition)
 	{
 	case 0:

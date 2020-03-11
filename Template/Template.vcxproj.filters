@@ -132,6 +132,9 @@
     <ClCompile Include="..\src\ScoreBoardManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\LevelTwo.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Game.h">
@@ -250,6 +253,9 @@
     </ClInclude>
     <ClInclude Include="..\src\ScoreBoardManager.h">
       <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LevelTwo.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

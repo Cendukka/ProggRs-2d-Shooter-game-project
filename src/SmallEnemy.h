@@ -4,21 +4,33 @@
 #define __SMALL_ENEMY__
 #include "Enemy.h"
 
+#include <vector>
+#include "DisplayObject.h"
+#include "TextureManager.h"
 
-class SmallEnemy : public Enemy
+class SmallEnemy : public DisplayObject
 {
 public:
-	SmallEnemy(int theYPosition);
+	SmallEnemy();
 	~SmallEnemy();
 
+	void draw() override;
 	void update() override;
-	void decreaseHealth() override;
 	void clean() override;
-	int getHealth();
+	void move();
+	void reset();
+	void getDamage();
+	void setActive(bool active);
+	bool isActive();
 
 private:
 
-	int m_health;
+	int m_health; 
+	float m_maxSpeed;
+	double m_currentDirection;
+	Uint8 m_alpha;
+	bool m_isActive;
+
 };
 
 

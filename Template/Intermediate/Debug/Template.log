@@ -1,1 +1,12 @@
-﻿  Template.vcxproj -> C:\Users\samul\Documents\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+﻿  LevelTwo.cpp
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(125,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(126,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Template.vcxproj -> C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

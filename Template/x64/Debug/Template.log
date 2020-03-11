@@ -97,20 +97,20 @@ C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(
               T=float
           ]
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(21,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(70,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(71,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(72,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(73,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(94,4): warning C4065: switch statement contains 'default' but no 'case' labels
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(189,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(199,19): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(206,19): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(71,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(72,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(73,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(74,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(95,4): warning C4065: switch statement contains 'default' but no 'case' labels
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(190,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(200,19): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(207,19): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(209,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(211,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(210,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\CollisionManager.cpp(212,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Comet.cpp
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Comet.cpp(10,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
@@ -220,22 +220,33 @@ C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Label.cpp(76,16): war
               T=float
           ]
   Level1Scene.cpp
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(114,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(127,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(115,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Level1Scene.cpp(128,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
+  LevelTwo.cpp
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(119,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(120,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  Compiling...
   main.cpp
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\main.cpp(28,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\main.cpp(38,1): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(243): message : see declaration of 'freopen'
-  Generating Code...
-  Compiling...
   MediumBoss.cpp
   Mine.cpp
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Mine.cpp(11,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
@@ -260,18 +271,19 @@ C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Mine.cpp(25,17): warn
           ]
   NextLevelButton.cpp
   NextLevelScene.cpp
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(49,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(54,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(50,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(55,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
   Scene.cpp
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\Scene.cpp(32,29): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  ScoreBoardManager.cpp
   ship.cpp
 C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\ship.cpp(18,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
@@ -661,11 +673,12 @@ imgui_sdl.obj : error LNK2019: unresolved external symbol SDL_RenderCopyEx refer
 TextureManager.obj : error LNK2001: unresolved external symbol SDL_RenderCopyEx
 imgui_sdl.obj : error LNK2019: unresolved external symbol SDL_DestroyTexture referenced in function "public: __cdecl `anonymous namespace'::Texture::~Texture(void)" (??1Texture@?A0x4afcecdf@@QEAA@XZ)
 TextureManager.obj : error LNK2001: unresolved external symbol SDL_DestroyTexture
-StartScene.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function "int `public: __cdecl StartScene::StartScene(void)'::`1'::dtor$0" (?dtor$0@?0???0StartScene@@QEAA@XZ@4HA)
+NextLevelScene.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function "protected: void __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::_Getvals<wchar_t>(wchar_t,class std::_Locinfo const &)" (??$_Getvals@_W@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@IEAAX_WAEBV_Locinfo@1@@Z)
+StartScene.obj : error LNK2001: unresolved external symbol SDL_PollEvent
 EndScene.obj : error LNK2001: unresolved external symbol SDL_PollEvent
 Game.obj : error LNK2001: unresolved external symbol SDL_PollEvent
 Level1Scene.obj : error LNK2001: unresolved external symbol SDL_PollEvent
-NextLevelScene.obj : error LNK2001: unresolved external symbol SDL_PollEvent
+LevelTwo.obj : error LNK2001: unresolved external symbol SDL_PollEvent
 FontManager.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function "public: bool __cdecl FontManager::textToTexture(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct SDL_Color)" (?textToTexture@FontManager@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00USDL_Color@@@Z)
 Game.obj : error LNK2001: unresolved external symbol SDL_GetError
 SoundManager.obj : error LNK2001: unresolved external symbol SDL_GetError
