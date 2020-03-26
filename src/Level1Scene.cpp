@@ -170,6 +170,11 @@ void Level1Scene::handleEvents()
 			case SDLK_3:
 				TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
 				break;*/
+			/*case SDLK_4:
+				TheGame::Instance()->changeSceneState(SceneState::FINAL_LEVEL);
+				ScoreBoardManager::Instance()->setHealth(100);
+				ScoreBoardManager::Instance()->setScore(0);
+				break;*/
 
 				/************************************************************************/
 			case SDLK_w:

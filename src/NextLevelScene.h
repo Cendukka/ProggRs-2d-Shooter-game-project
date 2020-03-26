@@ -1,6 +1,7 @@
 #pragma once
-#ifndef _NEXT_LEVEL_SCENE__
-#define _NEXT_LEVEL_SCENE__
+#ifndef __NEXT_LEVEL_SCENE__
+#define __NEXT_LEVEL_SCENE__
+
 
 #include "Scene.h"
 #include "NextLevelButton.h"

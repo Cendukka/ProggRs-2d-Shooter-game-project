@@ -166,6 +166,14 @@ void Game::changeSceneState(SceneState newState)
 			m_currentScene = new LevelTwo();
 			std::cout << "Level Two Scene Started" << std::endl;
 			break;
+		case SceneState::TO_FINAL_LEVEL_SCENE:
+			m_currentScene = new ToFinalLevelScene();
+			std::cout << "To Final Level Scene Started" << std::endl;
+			break;
+		case SceneState::FINAL_LEVEL:
+			m_currentScene = new FinalLevel();
+			std::cout << "Final Level Started" << std::endl;
+			break;
 		case SceneState::END_SCENE:
 			m_currentScene = new EndScene();
 			std::cout << "end scene activated" << std::endl;

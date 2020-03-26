@@ -26,6 +26,8 @@
 #include "Level1Scene.h"
 #include "NextLevelScene.h"
 #include "LevelTwo.h"
+#include "ToFinalLevelScene.h"
+#include "FinalLevel.h"
 #include "EndScene.h"
 
 class Game

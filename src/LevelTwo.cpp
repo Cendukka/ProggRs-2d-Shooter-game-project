@@ -40,7 +40,7 @@ void LevelTwo::draw()
 
 void LevelTwo::update()
 {
-	if (TheGame::Instance()->getScore() >= 8000)
+	if (ScoreBoardManager::Instance()->getScore() >= 8000)
 	{
 		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
 		TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);

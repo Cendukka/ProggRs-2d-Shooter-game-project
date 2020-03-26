@@ -135,6 +135,15 @@
     <ClCompile Include="..\src\LevelTwo.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ToFinalLevelScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FinalLevelButton.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FinalLevel.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Game.h">
@@ -255,6 +264,15 @@
       <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="..\src\LevelTwo.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ToFinalLevelScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FinalLevelButton.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FinalLevel.h">
       <Filter>Scenes</Filter>
     </ClInclude>
   </ItemGroup>
