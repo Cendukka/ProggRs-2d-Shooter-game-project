@@ -11,6 +11,7 @@
 #include "SmallEnemy.h"
 #include "MediumBoss.h"
 
+
 class LevelTwo : public Scene
 {
 public:
@@ -23,7 +24,7 @@ public:
 	void handleEvents() override;
 	void start() override;
 	static const int MAX_COMETS = 4;
-	static const int MAX_SMALL_ENEMIES = 4;
+	static const int MAX_SMALL_ENEMIES = 3;
 
 
 

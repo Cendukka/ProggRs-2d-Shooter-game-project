@@ -51,6 +51,21 @@ void ScoreBoardManager::setHealth(const int new_lives)
 	m_pHealthLabel->setText("Lives: " + std::to_string(m_health));
 }
 
+void ScoreBoardManager::setEnemies(std::string setType)
+{
+	if (setType == "Increase") {
+		m_enemiesLeft += 1;
+	}
+	else if (setType == "Decrease") {
+		m_enemiesLeft -= 1;
+	}
+}
+
+int ScoreBoardManager::enemiesLeft()
+{
+	return m_enemiesLeft;
+}
+
 ScoreBoardManager::ScoreBoardManager()
 {
 	Start();

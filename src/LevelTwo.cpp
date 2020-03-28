@@ -31,16 +31,18 @@ void LevelTwo::draw()
 	//draw small enemies
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
-		m_pSmallEnemies[i]->draw();
+		m_pSmallEnemies[i]->draw(i);
+		m_pSmallEnemies[i]->drawBullets();
 	}
+	//draw medium boss
+	m_pMediumBoss->draw();
+	m_pMediumBoss->drawBullets();
 	ScoreBoardManager::Instance()->Draw();
-
-
 }
 
 void LevelTwo::update()
 {
-	if (ScoreBoardManager::Instance()->getScore() >= 8000)
+	if (ScoreBoardManager::Instance()->getScore() >= 10000)
 	{
 		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
 		TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
@@ -61,9 +63,20 @@ void LevelTwo::update()
 	{
 		m_pComets[i]->update();
 	}
+
+	//Update the small enemies
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 		m_pSmallEnemies[i]->update();
 	}
+
+	//handle the enemies' Firing
+	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+		//Enemies shooting
+
+		m_pSmallEnemies[i]->handleFiring();
+
+	}
+
 	for (int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		for (int j = 0; j < MAX_COMETS; j++)
@@ -81,7 +94,7 @@ void LevelTwo::update()
 			}
 		}
 
-		/*for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+		for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[i]))
 			{
 				m_pSmallEnemies[i]->decreaseHealth();
@@ -92,14 +105,12 @@ void LevelTwo::update()
 				m_pMediumBoss->decreaseHealth();
 				m_pShip->mBullets[i]->reset();
 			}
-		}*/
+		}
 	}
 	m_pBackground->update();
 	m_pBackground1->update();
 	m_pMediumBoss->update();
-
-	//m_pLabel->setText("SCORE: " + std::to_string(TheGame::Instance()->getScore()));
-
+	
 }
 
 
@@ -221,6 +232,9 @@ void LevelTwo::start()
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 	m_pMediumBoss = new MediumBoss();
+	//adds one enemy in the counter variable
+	ScoreBoardManager::Instance()->setEnemies("Increase");
+
 //	m_pSmallEnemies = new SmallEnemy();
 	//SDL_Color color = { 255, 0, 0, 255 };
 	
@@ -229,7 +243,10 @@ void LevelTwo::start()
 
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
-		m_pSmallEnemies[i] = new SmallEnemy();
+		int position = 150 * (i + 1);
+		m_pSmallEnemies[i] = new SmallEnemy(position);
+		//adds one enemy in the counter variable
+		ScoreBoardManager::Instance()->setEnemies("Increase");
 	}
 
 	for (int i = 0; i < MAX_COMETS; i++)

@@ -30,6 +30,11 @@ public:
 	void setHealth(int new_health);
 
 
+	void setEnemies(std::string setType);
+	int enemiesLeft();
+
+
+
 private:
 	ScoreBoardManager();
 	~ScoreBoardManager();
@@ -41,5 +46,7 @@ private:
 	Label* m_pScoreLabel{};
 
 	static ScoreBoardManager* m_pInstance;
+
+	int m_enemiesLeft;
 };
 #endif /* defined (__SCORE_BOARD_MANAGER__) */

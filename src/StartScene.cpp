@@ -81,9 +81,9 @@ void StartScene::handleEvents()
 			case SDLK_ESCAPE:
 				TheGame::Instance()->quit();
 				break;
-			/*case SDLK_1:
-				TheGame::Instance()->changeSceneState(SceneState::LEVEL1_SCENE);
-				break;*/
+			case SDLK_1:
+				TheGame::Instance()->changeSceneState(SceneState::LEVEL_TWO);
+				break;
 			case SDLK_2:
 				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
 				break;

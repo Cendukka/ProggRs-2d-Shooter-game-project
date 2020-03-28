@@ -33,6 +33,7 @@ void Enemy::draw()
 
 void Enemy::update()
 {
+	//Move the enemies forward
 	if (getPosition().x >= Config::SCREEN_WIDTH * 0.8) {
 		setPosition(glm::vec2((getPosition().x - 2), getPosition().y));
 	}
@@ -59,10 +60,23 @@ bool Enemy::isActive()
 	return m_isActive;
 }
 
+void Enemy::setMovingUp(bool goingUp)
+{
+	m_movingUp = goingUp;
+}
+
+
+
+bool Enemy::getMovingUp()
+{
+	return m_movingUp;
+}
+
+//Drawing more small enemies
 void Enemy::draw(int yEnemyPosition)
 {
 	
-	int yComponent{};
+	int yComponent = 0;
 	switch(yEnemyPosition)
 	{
 	case 0:
@@ -77,9 +91,6 @@ void Enemy::draw(int yEnemyPosition)
 	}
 	int xComponent = getPosition().x;
 	
-
-
-
 	TheTextureManager::Instance()->draw(m_name, xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), 0, m_alpha, true);
 }

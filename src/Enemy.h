@@ -22,14 +22,20 @@ public:
 	void setActive(bool active);
 	void setAlpha(Uint8 value);
 	bool isActive();
-	virtual void decreaseHealth() = 0;
+	void setMovingUp(bool goingUp);
+	
+	
+	bool getMovingUp();
 
+	virtual void decreaseHealth() = 0;
+	
 	
 private:
 	std::string m_name;
 	bool m_isCentered;
 	bool m_isActive;
 	Uint8 m_alpha;
+	bool m_movingUp;
 };
 
 
