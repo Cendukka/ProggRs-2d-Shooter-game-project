@@ -185,6 +185,7 @@
     <ClCompile Include="..\src\Mine.cpp" />
     <ClCompile Include="..\src\NextLevelButton.cpp" />
     <ClCompile Include="..\src\NextLevelScene.cpp" />
+    <ClCompile Include="..\src\PowerUp.cpp" />
     <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\ScoreBoardManager.cpp" />
     <ClCompile Include="..\src\ship.cpp" />
@@ -228,6 +229,7 @@
     <ClInclude Include="..\src\Mine.h" />
     <ClInclude Include="..\src\NextLevelButton.h" />
     <ClInclude Include="..\src\NextLevelScene.h" />
+    <ClInclude Include="..\src\PowerUp.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\SceneState.h" />
     <ClInclude Include="..\src\ScoreBoardManager.h" />

@@ -26,6 +26,7 @@ void Level1Scene::draw()
 	for (int i = 0; i < MAX_COMETS; i++)
 	{
 		m_pComets[i]->draw();
+		m_pComets[i]->getPowerUp()->draw();
 	}
 	//m_pComet->draw();
 
@@ -79,6 +80,10 @@ void Level1Scene::update()
 				m_pShip->decreaseLife();
 				m_pComets[j]->reset();
 
+			}
+			if(Collision::squaredRadiusCheck(m_pShip, m_pComets[j]->getPowerUp()))
+			{
+				m_pComets[j]->getPowerUp()->reset();
 			}
 		}
 		//Update enemies and check collision

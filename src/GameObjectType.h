@@ -11,6 +11,7 @@ enum GameObjectType {
 	START_BUTTON,
 	NEXT_LEVEL_BUTTON,
 	BACK_GROUND,
+	POWER_UP,
 	NUM_OF_TYPES
 };
 

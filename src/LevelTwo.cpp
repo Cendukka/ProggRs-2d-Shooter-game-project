@@ -25,6 +25,7 @@ void LevelTwo::draw()
 	for (int i = 0; i < MAX_COMETS; i++)
 	{
 		m_pComets[i]->draw();
+		m_pComets[i]->getPowerUp()->draw();
 	}
 	//pComet->draw();
 
@@ -91,6 +92,10 @@ void LevelTwo::update()
 				m_pShip->decreaseLife();
 				m_pComets[j]->reset();
 
+			}
+			if(Collision::squaredRadiusCheck(m_pShip, m_pComets[j]->getPowerUp()))
+			{
+				m_pComets[j]->getPowerUp()->reset();
 			}
 		}
 

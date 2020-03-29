@@ -9,6 +9,12 @@
 #include <SDL_hints.h>
 #include "Comet.h"
 
+enum BulletPosition
+{
+	TOP,
+	MIDDLE,
+	BOTTOM
+};
 
 class Bullet : public DisplayObject
 {
@@ -24,6 +30,7 @@ public:
 	bool isActive();
 
 	void fire(glm::vec2 position);
+	void fire(glm::vec2 position, BulletPosition bulletPosition);
 	//setter
 	void setSpeed(float newSpeed);
 	//getter
@@ -38,6 +45,9 @@ private:
 	bool m_isActive;
 	Comet* m_pComet;
 	float m_speed;
+	
+	BulletPosition m_bulletPosition;
+
 
 };
 

@@ -5,6 +5,7 @@
 #include "PlayScene.h"
 #include "Level1Scene.h"
 #include "GLM/gtx/string_cast.hpp"
+#include "ScoreBoardManager.h"
 
 
 Ship::Ship() :
@@ -29,6 +30,7 @@ Ship::Ship() :
 	{
 		mBullets[i] = new Bullet();
 	}
+	m_powerUp = 0;
 }
 
 
@@ -77,18 +79,57 @@ void Ship::update()
 	{
 		mBullets[i]->update();
 	}
+	setPowerUp(ScoreBoardManager::Instance()->getPowerUp());
 }
 
 void Ship::handleFiring()
 {
-	for (int i = 0; i < MAX_BULLETS; i++)
+	int numberOfBullets = 10;
+	if(m_powerUp == 0)
 	{
-		if (!mBullets[i]->isActive())
+		numberOfBullets = 10;
+		for (int i = 0; i < numberOfBullets; i++)
 		{
-			mBullets[i]->fire(this->getPosition());
-			break;
+			if (!mBullets[i]->isActive())
+			{
+				mBullets[i]->fire(this->getPosition());
+				break;
+			}
 		}
 	}
+	if(m_powerUp == 1)
+	{
+		numberOfBullets = 20;
+		for (int i = 0; i < numberOfBullets; i++)
+		{
+			if (!mBullets[i]->isActive())
+			{
+				mBullets[i]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y + this->getHeight() * 1 / 3));
+				mBullets[i + 1]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y - this->getHeight() * 1 / 3));
+				break;
+			}
+		}
+	}
+	if(m_powerUp == 2)
+	{
+		numberOfBullets = 30;
+		for (int i = 0; i < numberOfBullets; i++)
+		{
+			if (!mBullets[i]->isActive())
+			{
+				mBullets[i]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y), TOP);
+				mBullets[i + 1]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y), MIDDLE);
+				mBullets[i + 2]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y), BOTTOM);
+				break;
+			}
+		}
+	}
+
 }
 
 
@@ -140,6 +181,11 @@ Tile* Ship::getTile()
 void Ship::setTile(Tile* newTile)
 {
 	m_currentTile = newTile;
+}
+
+void Ship::setPowerUp(int value)
+{
+	m_powerUp = value;
 }
 
 glm::vec2 Ship::getTarget()

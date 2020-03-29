@@ -19,6 +19,7 @@ Comet::Comet()
 	m_angle = 0;
 	m_rotationAngel = 0;
 	reset();
+	m_pPowerUp = new PowerUp();
 }
 
 Comet::~Comet()
@@ -34,6 +35,7 @@ void Comet::draw()
 
 	TheTextureManager::Instance()->draw("comet", xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), m_angle, m_alpha, true);
+	//m_pPowerUp->draw();
 }
 
 void Comet::update()
@@ -47,9 +49,17 @@ void Comet::update()
 	}
 	if(m_health <= 0)
 	{
+		int randomNumber = (rand() % 10) + 1;
+		int condition = (rand() % 10) + 1;
+		//std::cout << "Random: " << randomNumber << " Condition: " << condition << std::endl;
+		if(randomNumber == condition)
+		{
+			m_pPowerUp->start(getPosition());
+		}
 		reset();
 		m_health = 2;
 	}
+	m_pPowerUp->update();
 	m_angle += m_rotationAngel;
 	
 }
@@ -94,3 +104,9 @@ bool Comet::isActive()
 {
 	return m_isActive;
 }
+
+PowerUp* Comet::getPowerUp()
+{
+	return m_pPowerUp;
+}
+

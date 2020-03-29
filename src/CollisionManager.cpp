@@ -47,6 +47,9 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				std::cout << "Collision with Enemy!" << std::endl;
 				
 				object1->clean();
+			case POWER_UP:
+				ScoreBoardManager::Instance()->setPowerUp(ScoreBoardManager::Instance()->getPowerUp() + 1);
+				std::cout << "Collision with PowerUp!" << std::endl;
 			default:
 				//std::cout << "Collision with unknown type!" << std::endl;
 				break;

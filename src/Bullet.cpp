@@ -18,6 +18,8 @@ Bullet::Bullet()
 	setSpeed(10.0f);
 	setActive(false);
 	m_alpha = 0;
+	m_bulletPosition = MIDDLE;
+
 }
 
 Bullet::~Bullet() = default;
@@ -40,7 +42,17 @@ void Bullet::update()
 	}
 	if (isActive())
 	{
-		setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y));
+		if(m_bulletPosition == TOP)
+		{
+			setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y + getSpeed()/2));
+		}else if(m_bulletPosition == BOTTOM)
+		{
+			setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y - getSpeed()/2));
+		}
+		else if(m_bulletPosition == MIDDLE)
+		{
+			setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y));
+		}
 	}
 	if(m_pComet != nullptr)
 	{
@@ -79,6 +91,16 @@ bool Bullet::isActive()
 
 void Bullet::fire(glm::vec2 position)
 {
+	setIsColliding(false);
+	m_alpha = 255;
+	setPosition(position);
+	draw();
+	setActive(true);
+}
+
+void Bullet::fire(glm::vec2 position, BulletPosition bulletPosition)
+{
+	m_bulletPosition = bulletPosition;
 	setIsColliding(false);
 	m_alpha = 255;
 	setPosition(position);

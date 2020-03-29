@@ -7,6 +7,7 @@
 #include "DisplayObject.h"
 #include "TextureManager.h"
 #include "SoundManager.h"
+#include "PowerUp.h"
 
 class Comet:public DisplayObject
 {
@@ -21,6 +22,7 @@ public:
 	void getDamage();
 	void setActive(bool active);
 	bool isActive();
+	PowerUp* getPowerUp();
 private:
 	float m_maxSpeed;
 	double m_currentDirection;
@@ -29,6 +31,8 @@ private:
 	int m_health;
 	float m_angle;
 	float m_rotationAngel;
+
+	PowerUp* m_pPowerUp;
 };
 
 #endif

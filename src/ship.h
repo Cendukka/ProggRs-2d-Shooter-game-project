@@ -33,8 +33,8 @@ public:
 	// pathfinding behaviours
 	Tile* getTile();
 	void setTile(Tile* newTile);
-
-	static const int MAX_BULLETS = 10;
+	void setPowerUp(int value);
+	static const int MAX_BULLETS = 30;
 	Bullet* mBullets[MAX_BULLETS];
 	void handleFiring();
 	glm::vec2 getTarget();
@@ -49,6 +49,7 @@ private:
 
 	//health
 	int m_health;
+	int m_powerUp;
 
 	// steering behaviours
 	void m_seek();

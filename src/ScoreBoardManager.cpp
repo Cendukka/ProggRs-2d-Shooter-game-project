@@ -10,7 +10,7 @@ void ScoreBoardManager::Start()
 		glm::vec2(10.0f, 10.0f), TTF_STYLE_NORMAL, false);
 
 
-	
+	setPowerUp(0);
 	
 	m_pScoreLabel = new Label("Score: 0", "lazy", 24, yellow,
 		glm::vec2(650.0f, 10.0f), TTF_STYLE_NORMAL, false);
@@ -49,6 +49,19 @@ void ScoreBoardManager::setHealth(const int new_lives)
 		Game::Instance()->changeSceneState(END_SCENE);
 	}
 	m_pHealthLabel->setText("Lives: " + std::to_string(m_health));
+}
+
+int ScoreBoardManager::getPowerUp() const
+{
+	return m_powerUp;
+}
+
+void ScoreBoardManager::setPowerUp(int new_powerUp)
+{
+	if(new_powerUp <= 2)
+	{
+		m_powerUp = new_powerUp;
+	}
 }
 
 void ScoreBoardManager::setEnemies(std::string setType)

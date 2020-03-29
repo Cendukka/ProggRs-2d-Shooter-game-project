@@ -29,6 +29,9 @@ public:
 	int getHealth() const;
 	void setHealth(int new_health);
 
+	int getPowerUp() const;
+	void setPowerUp(int new_powerUp);
+
 
 	void setEnemies(std::string setType);
 	int enemiesLeft();
@@ -41,6 +44,7 @@ private:
 
 	int m_score{};
 	int m_health{};
+	int m_powerUp{};
 
 	Label* m_pHealthLabel{};
 	Label* m_pScoreLabel{};
