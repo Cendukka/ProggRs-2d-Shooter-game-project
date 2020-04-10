@@ -68,6 +68,7 @@ public:
 
 	void setFrames(Uint32 frames);
 	Uint32 getFrames();
+	int getCurrentScene();
 
 	void changeSceneState(SceneState newState);
 	void quit();

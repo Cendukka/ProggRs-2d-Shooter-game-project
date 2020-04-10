@@ -1,35 +1,12 @@
-﻿  LevelTwo.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(141,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  FinalLevel.cpp
+D:\GitHub\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(127,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(142,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+D:\GitHub\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(128,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-  PowerUp.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\PowerUp.cpp(9,15): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\PowerUp.cpp(10,16): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\PowerUp.cpp(26,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\PowerUp.cpp(27,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\PowerUp.cpp(30,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+  Template.vcxproj -> D:\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

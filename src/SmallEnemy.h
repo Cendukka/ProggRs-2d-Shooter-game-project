@@ -23,7 +23,7 @@ public:
 	void reset();
 
 
-	static const int MAX_BULLETS = 20;
+	static const int MAX_BULLETS = 1;
 	EnemyBullet* pEnemyBullets[MAX_BULLETS];
 	void handleFiring();
 	void drawBullets();

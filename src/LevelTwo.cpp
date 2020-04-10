@@ -43,11 +43,11 @@ void LevelTwo::draw()
 
 void LevelTwo::update()
 {
-	if (ScoreBoardManager::Instance()->getScore() >= 10000)
+	/*if (ScoreBoardManager::Instance()->getScore() >= 1000000)
 	{
 		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
-		TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
-	}
+		TheGame::Instance()->changeSceneState(SceneState::TO_FINAL_LEVEL_SCENE);
+	}*/
 	//ship follows the mouse
 	//also checks that ship won't go over half of the screen
 	if (m_mousePosition.x > (Config::SCREEN_WIDTH * 0.5f))
@@ -73,7 +73,6 @@ void LevelTwo::update()
 	//handle the enemies' Firing
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 		//Enemies shooting
-
 		m_pSmallEnemies[i]->handleFiring();
 
 	}
@@ -112,6 +111,7 @@ void LevelTwo::update()
 			}
 		}
 	}
+
 	m_pBackground->update();
 	m_pBackground1->update();
 	m_pMediumBoss->update();
@@ -178,14 +178,14 @@ void LevelTwo::handleEvents()
 				ScoreBoardManager::Instance()->setHealth(100);
 				ScoreBoardManager::Instance()->setScore(0);
 				break;
-		/*	case SDLK_2:
-				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
-				break;
-			case SDLK_3:
-				TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
-				break;*/
+				/*	case SDLK_2:
+						TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
+						break;
+					case SDLK_3:
+						TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
+						break;*/
 
-				/************************************************************************/
+						/************************************************************************/
 			case SDLK_w:
 
 				break;

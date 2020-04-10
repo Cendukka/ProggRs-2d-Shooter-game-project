@@ -131,6 +131,11 @@ Uint32 Game::getFrames()
 	return m_frames;
 }
 
+int Game::getCurrentScene()
+{
+	return m_currentSceneState;
+}
+
 void Game::changeSceneState(SceneState newState)
 {
 	if (newState != m_currentSceneState) {

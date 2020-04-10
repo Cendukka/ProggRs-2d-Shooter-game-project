@@ -6,6 +6,7 @@ enum GameObjectType {
 	PLAYER,
 	BULLET,
 	ENEMY,
+	ENEMY_BULLET,
 	SHIP,
 	COMET,	
 	START_BUTTON,

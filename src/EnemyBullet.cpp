@@ -14,7 +14,7 @@ EnemyBullet::EnemyBullet()
 	setHeight(20);
 	//setPosition(glm::vec2(400.0f, 300.0f));
 	setIsColliding(false);
-	setType(BULLET);
+	setType(ENEMY_BULLET);
 	setSpeed(10.0f);
 	setActive(false);
 	m_alpha = 0;
@@ -57,7 +57,7 @@ void EnemyBullet::reset()
 
 void EnemyBullet::clean()
 {
-	//reset();
+	update();
 }
 
 void EnemyBullet::setActive(bool active)

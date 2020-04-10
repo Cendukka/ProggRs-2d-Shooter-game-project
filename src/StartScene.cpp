@@ -112,5 +112,5 @@ void StartScene::start()
 	addChild(m_pBackground);
 	addChild(m_pBackground1);
 
-	
+	TheSoundManager::Instance()->load("../Assets/audio/boom.mp3", "boom", SOUND_SFX);
 }

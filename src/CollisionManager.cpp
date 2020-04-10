@@ -40,12 +40,15 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				
 				//TheSoundManager::Instance()->playSound("thunder", 0);
 				break;
+			case ENEMY_BULLET:
+				ScoreBoardManager::Instance()->setHealth(ScoreBoardManager::Instance()->getHealth() - 4);
+				object2->clean();
+				break;
 			case SHIP:
 				std::cout << "Collision with Ship!" << std::endl;
 				break;
 			case ENEMY:
 				std::cout << "Collision with Enemy!" << std::endl;
-				
 				object1->clean();
 			case POWER_UP:
 				ScoreBoardManager::Instance()->setPowerUp(ScoreBoardManager::Instance()->getPowerUp() + 1);

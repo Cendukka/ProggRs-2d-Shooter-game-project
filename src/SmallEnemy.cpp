@@ -70,7 +70,7 @@ void SmallEnemy::update()
 	{
 		setAlpha(0);
 		setIsColliding(false);
-		setPosition(glm::vec2(0.0f, -getHeight()));
+		setPosition(glm::vec2(0.0f, -200.0f));
 	}
 	for (int i = 0; i < MAX_BULLETS; i++)
 	{
@@ -101,10 +101,16 @@ void SmallEnemy::decreaseHealth()
 	if (m_health <= 0) {
 		//increas the score when enemy dies
 		ScoreBoardManager::Instance()->setScore(ScoreBoardManager::Instance()->getScore() + 300);
-
+		clean();
 		ScoreBoardManager::Instance()->setEnemies("Decrease");
 		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
-			Game::Instance()->changeSceneState(NEXT_LEVEL_SCENE);
+			if (Game::Instance()->getCurrentScene() == LEVEL_TWO) {
+
+				Game::Instance()->changeSceneState(TO_FINAL_LEVEL_SCENE);
+			}
+			else {
+				Game::Instance()->changeSceneState(END_SCENE);
+			}
 		}
 	}
 }
