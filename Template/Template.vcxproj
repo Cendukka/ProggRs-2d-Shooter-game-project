@@ -172,6 +172,7 @@
     <ClCompile Include="..\src\EndScene.cpp" />
     <ClCompile Include="..\src\Enemy.cpp" />
     <ClCompile Include="..\src\EnemyBullet.cpp" />
+    <ClCompile Include="..\src\FinalBoss.cpp" />
     <ClCompile Include="..\src\FinalLevel.cpp" />
     <ClCompile Include="..\src\FinalLevelButton.cpp" />
     <ClCompile Include="..\src\FontManager.cpp" />
@@ -216,6 +217,7 @@
     <ClInclude Include="..\src\EndScene.h" />
     <ClInclude Include="..\src\Enemy.h" />
     <ClInclude Include="..\src\EnemyBullet.h" />
+    <ClInclude Include="..\src\FinalBoss.h" />
     <ClInclude Include="..\src\FinalLevel.h" />
     <ClInclude Include="..\src\FinalLevelButton.h" />
     <ClInclude Include="..\src\FontManager.h" />

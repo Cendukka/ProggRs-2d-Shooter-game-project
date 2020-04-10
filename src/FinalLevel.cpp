@@ -30,11 +30,12 @@ void FinalLevel::draw()
 	//m_pComet->draw();
 
 	//Draws small enemies
-	/*for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
 		m_pSmallEnemies[i]->draw(i);
-	}*/
+	}
 	m_pMediumBoss->draw();
+	m_pFinalBoss->draw();
 	ScoreBoardManager::Instance()->Draw();
 }
 
@@ -89,13 +90,15 @@ void FinalLevel::update()
 				m_pShip->mBullets[i]->reset();
 
 			}
-
-			//	if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))
-			//	{
-			//		m_pMediumBoss->decreaseHealth();
-			//		m_pShip->mBullets[i]->reset();
-			//	}
-			}
+		}
+		if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))
+		{
+			m_pMediumBoss->decreaseHealth();
+			m_pShip->mBullets[i]->reset();
+		}
+		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
+			m_pFinalBoss->update();
+		}
 	}
 	m_pBackground->update();
 	m_pBackground1->update();
@@ -217,11 +220,11 @@ void FinalLevel::start()
 {
 	// allocates memory on the heap for this game object
 
-
 	m_pShip = new Ship();
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 	m_pMediumBoss = new MediumBoss();
+	m_pFinalBoss = new FinalBoss();
 	//SDL_Color color = { 255, 0, 0, 255 };
 	//m_pLabel = new Label("", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
 	ScoreBoardManager::Instance()->Start();
@@ -230,7 +233,7 @@ void FinalLevel::start()
 	{
 		int position = 150*(i+1);
 		m_pSmallEnemies[i] = new SmallEnemy(position);
-		std::cout << m_pSmallEnemies[i]->getPosition().x << " " << m_pSmallEnemies[i]->getPosition().y << std::endl;
+		ScoreBoardManager::Instance()->setEnemies("Increase");
 	}
 
 	for (int i = 0; i < MAX_COMETS; i++)

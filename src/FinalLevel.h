@@ -12,6 +12,7 @@
 #include "Comet.h"
 #include "SmallEnemy.h"
 #include "MediumBoss.h"
+#include "FinalBoss.h"
 
 class FinalLevel : public Scene
 {
@@ -25,8 +26,7 @@ public:
 	void handleEvents() override;
 	void start() override;
 	static const int MAX_COMETS = 5;
-	static const int MAX_SMALL_ENEMIES = 6;
-
+	static const int MAX_SMALL_ENEMIES = 3;
 
 
 	// getters
@@ -38,6 +38,8 @@ private:
 
 	glm::vec2 m_mousePosition;
 
+	
+
 	int m_mouseRegister;
 	Ship* m_pShip;
 	Bullet* m_pBullet;
@@ -47,6 +49,7 @@ private:
 	Comet* m_pComets[MAX_COMETS];
 	SmallEnemy* m_pSmallEnemies[MAX_SMALL_ENEMIES];
 	MediumBoss* m_pMediumBoss;
+	FinalBoss* m_pFinalBoss;
 	Label* m_pLabel;
 };
 

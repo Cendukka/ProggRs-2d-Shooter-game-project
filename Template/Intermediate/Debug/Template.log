@@ -1,12 +1,14 @@
-﻿  FinalLevel.cpp
-D:\GitHub\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(127,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  FinalBoss.cpp
+  FinalLevel.cpp
+D:\GitHub\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(130,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\GitHub\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(128,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+D:\GitHub\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(131,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
+  Generating Code...
   Template.vcxproj -> D:\GitHub\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

@@ -108,9 +108,6 @@ void SmallEnemy::decreaseHealth()
 
 				Game::Instance()->changeSceneState(TO_FINAL_LEVEL_SCENE);
 			}
-			else {
-				Game::Instance()->changeSceneState(END_SCENE);
-			}
 		}
 	}
 }

@@ -60,7 +60,11 @@ void MediumBoss::decreaseHealth()
 
 		ScoreBoardManager::Instance()->setEnemies("Decrease");
 		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
-			Game::Instance()->changeSceneState(NEXT_LEVEL_SCENE);
+			clean();
+			if (Game::Instance()->getCurrentScene() == LEVEL_TWO) {
+
+				Game::Instance()->changeSceneState(TO_FINAL_LEVEL_SCENE);
+			}
 		}
 	}
 }
