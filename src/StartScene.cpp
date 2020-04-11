@@ -21,6 +21,7 @@ void StartScene::draw()
 	m_pBackground1->draw();
 	m_pStartLabel->draw();
 	m_pStartButton->draw();
+	m_pTutorialButton->draw();
 	
 }
 
@@ -30,12 +31,14 @@ void StartScene::update()
 	m_pBackground1->update();
 	m_pStartButton->setMousePosition(m_mousePosition);
 	m_pStartButton->ButtonClick();
+	m_pTutorialButton->setMousePosition(m_mousePosition);
+	m_pTutorialButton->ButtonClick();
 	
 }
 
 void StartScene::clean()
 {
-	delete m_pStartLabel;
+	//delete m_pStartLabel;
 	
 	removeAllChildren();
 }
@@ -62,6 +65,7 @@ void StartScene::handleEvents()
 			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
+				m_pTutorialButton->setMouseButtonClicked(true);
 				m_pStartButton->setMouseButtonClicked(true);
 				break;
 			}
@@ -71,6 +75,7 @@ void StartScene::handleEvents()
 			switch (event.button.button)
 			{
 			case SDL_BUTTON_LEFT:
+				m_pTutorialButton->setMouseButtonClicked(false);
 				m_pStartButton->setMouseButtonClicked(false);
 				break;
 			}
@@ -106,6 +111,9 @@ void StartScene::start()
 	m_pStartButton = new StartButton();
 	m_pStartButton->setMouseButtonClicked(false);
 
+	m_pTutorialButton = new TutorialButton();
+	m_pTutorialButton->setMouseButtonClicked(false);
+	
 	m_pBackground = new Background();
 	m_pBackground1 = new Background1();
 

@@ -4,6 +4,7 @@
 enum SceneState
 {
 	NO_SCENE = -1,
+	TUTORIAL_SCENE,
 	START_SCENE,
 	LEVEL1_SCENE,
 	PLAY_SCENE,

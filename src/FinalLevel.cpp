@@ -23,10 +23,10 @@ void FinalLevel::draw()
 	m_pBackground1->draw();
 	//m_pLabel->draw();
 	m_pShip->draw();
-	for (int i = 0; i < MAX_COMETS; i++)
-	{
-		m_pComets[i]->draw();
-	}
+	//for (int i = 0; i < MAX_COMETS; i++)
+	//{
+	//	m_pComets[i]->draw();
+	//}
 	//m_pComet->draw();
 
 	//Draws small enemies
@@ -59,16 +59,16 @@ void FinalLevel::update()
 	}
 	m_pShip->update();
 
-	for (int i = 0; i < MAX_COMETS; i++)
-	{
-		m_pComets[i]->update();
-	}
+	//for (int i = 0; i < MAX_COMETS; i++)
+	//{
+	//	m_pComets[i]->update();
+	//}
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 		m_pSmallEnemies[i]->update();
 	}
 	for (int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
-		for (int j = 0; j < MAX_COMETS; j++)
+		/*for (int j = 0; j < MAX_COMETS; j++)
 		{
 			if (Collision::squaredRadiusCheck(m_pComets[j], m_pShip->mBullets[i]))
 			{
@@ -81,7 +81,7 @@ void FinalLevel::update()
 				m_pComets[j]->reset();
 
 			}
-		}
+		}*/
 		//Update enemies and check collision
 		for (int k = 0; k < MAX_SMALL_ENEMIES; k++) {
 			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[k]))
@@ -236,10 +236,10 @@ void FinalLevel::start()
 		ScoreBoardManager::Instance()->setEnemies("Increase");
 	}
 
-	for (int i = 0; i < MAX_COMETS; i++)
-	{
-		m_pComets[i] = new Comet();
-	}
+	//for (int i = 0; i < MAX_COMETS; i++)
+	//{
+	//	m_pComets[i] = new Comet();
+	//}
 	ScoreBoardManager::Instance()->Start();
 }
 

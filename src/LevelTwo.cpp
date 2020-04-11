@@ -98,10 +98,10 @@ void LevelTwo::update()
 			}
 		}
 
-		for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
-			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[i]))
+		for (int k = 0; k < MAX_SMALL_ENEMIES; k++) {
+			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[k]))
 			{
-				m_pSmallEnemies[i]->decreaseHealth();
+				m_pSmallEnemies[k]->decreaseHealth();
 				m_pShip->mBullets[i]->reset();
 			}
 			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pMediumBoss))

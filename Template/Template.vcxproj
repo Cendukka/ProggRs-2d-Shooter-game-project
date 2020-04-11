@@ -196,6 +196,8 @@
     <ClCompile Include="..\src\StartScene.cpp" />
     <ClCompile Include="..\src\TextureManager.cpp" />
     <ClCompile Include="..\src\ToFinalLevelScene.cpp" />
+    <ClCompile Include="..\src\TutorialButton.cpp" />
+    <ClCompile Include="..\src\TutorialScene.cpp" />
     <ClCompile Include="..\src\Util.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +246,8 @@
     <ClInclude Include="..\src\SteeringState.h" />
     <ClInclude Include="..\src\TextureManager.h" />
     <ClInclude Include="..\src\ToFinalLevelScene.h" />
+    <ClInclude Include="..\src\TutorialButton.h" />
+    <ClInclude Include="..\src\TutorialScene.h" />
     <ClInclude Include="..\src\Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -52,8 +52,11 @@ void Comet::update()
 		int randomNumber = (rand() % 10) + 1;
 		int condition = (rand() % 10) + 1;
 		//std::cout << "Random: " << randomNumber << " Condition: " << condition << std::endl;
-		if(randomNumber == condition)
+		if(TheGame::Instance()->getCurrentScene() != TUTORIAL_SCENE && randomNumber == condition)
 		{
+			m_pPowerUp->start(getPosition());
+		}
+		else if (TheGame::Instance()->getCurrentScene() == TUTORIAL_SCENE) {
 			m_pPowerUp->start(getPosition());
 		}
 		reset();
