@@ -55,7 +55,7 @@ void Missile::update()
 		glm::vec2 position = getPosition();
 
 		position.x -= 1 * 2.0f;
-		//position.y -= 1 * 2.0f;
+		position.y -= (position.y - m_destination.y) / 100.0f;
 
 		setPosition(position);
 	}
