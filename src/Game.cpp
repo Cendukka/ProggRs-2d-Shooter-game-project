@@ -4,6 +4,7 @@
 #include <algorithm>
 #include "TileComparators.h"
 #include <iomanip>
+#include "TutorialScene.h"
 
 
 Game* Game::s_pInstance = 0;
@@ -182,6 +183,10 @@ void Game::changeSceneState(SceneState newState)
 		case SceneState::END_SCENE:
 			m_currentScene = new EndScene();
 			std::cout << "end scene activated" << std::endl;
+			break;
+		case SceneState::TUTORIAL_SCENE:
+			m_currentScene = new TutorialScene();
+			std::cout << "Tutorial scene activated" << std::endl;
 			break;
 		default:
 			std::cout << "default case activated" << std::endl;

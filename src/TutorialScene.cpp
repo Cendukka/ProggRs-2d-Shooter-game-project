@@ -22,6 +22,7 @@ void TutorialScene::draw()
 	m_pBackground1->draw();
 	m_pShip->draw();
 	m_pComet->draw();
+	m_pLabel->draw();
 	ScoreBoardManager::Instance()->Draw();
 }
 
