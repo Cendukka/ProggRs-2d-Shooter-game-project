@@ -1,12 +1,24 @@
-﻿  TutorialScene.cpp
-G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\TutorialScene.cpp(87,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  FinalLevel.cpp
+G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(152,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\TutorialScene.cpp(88,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(153,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
+  LevelTwo.cpp
+G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(156,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(157,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
   Template.vcxproj -> G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

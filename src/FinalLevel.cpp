@@ -30,9 +30,10 @@ void FinalLevel::draw()
 	//m_pComet->draw();
 
 	//Draws small enemies
-	for(int i = 0; i < MAX_SMALL_ENEMIES; i++)
+	for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
 		m_pSmallEnemies[i]->draw(i);
+		m_pSmallEnemies[i]->drawBullets();
 	}
 	m_pMediumBoss->draw();
 	m_pFinalBoss->draw();
@@ -70,6 +71,22 @@ void FinalLevel::update()
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 		m_pSmallEnemies[i]->update();
 	}
+
+
+	//handle the enemies' Firing
+	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
+		//Enemies shooting
+		m_pSmallEnemies[i]->handleFiring();
+		for (int k = 0; k < m_pSmallEnemies[i]->MAX_BULLETS; k++)
+		{
+			if (CollisionManager::squaredRadiusCheck(m_pShip, m_pSmallEnemies[i]->pEnemyBullets[k]))
+			{
+				m_pSmallEnemies[i]->pEnemyBullets[k]->reset();
+			}
+		}
+
+	}
+	
 	for (int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
 		/*for (int j = 0; j < MAX_COMETS; j++)
