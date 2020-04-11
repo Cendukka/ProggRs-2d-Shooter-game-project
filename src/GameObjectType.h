@@ -14,7 +14,8 @@ enum GameObjectType {
 	NEXT_LEVEL_BUTTON,
 	BACK_GROUND,
 	POWER_UP,
-	NUM_OF_TYPES
+	NUM_OF_TYPES,
+	MISSILE
 };
 
 #endif /* defined (__GAME_OBJECT_TYPE__)*/

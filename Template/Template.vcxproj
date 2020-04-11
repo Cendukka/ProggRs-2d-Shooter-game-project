@@ -185,6 +185,7 @@
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\MediumBoss.cpp" />
     <ClCompile Include="..\src\Mine.cpp" />
+    <ClCompile Include="..\src\Missile.cpp" />
     <ClCompile Include="..\src\NextLevelButton.cpp" />
     <ClCompile Include="..\src\NextLevelScene.cpp" />
     <ClCompile Include="..\src\PowerUp.cpp" />
@@ -232,6 +233,7 @@
     <ClInclude Include="..\src\LevelTwo.h" />
     <ClInclude Include="..\src\MediumBoss.h" />
     <ClInclude Include="..\src\Mine.h" />
+    <ClInclude Include="..\src\Missile.h" />
     <ClInclude Include="..\src\NextLevelButton.h" />
     <ClInclude Include="..\src\NextLevelScene.h" />
     <ClInclude Include="..\src\PowerUp.h" />
