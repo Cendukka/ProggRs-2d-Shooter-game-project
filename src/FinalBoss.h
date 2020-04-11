@@ -22,10 +22,13 @@ public:
 	EnemyBullet* pEnemyBullets[MAX_BULLETS];
 	void handleFiring();
 	void drawBullets();
+	void setIsActive(bool isActive);
+	bool getIsActive();
 
 private:
 
 	int m_health;
+	bool m_isActive;
 };
 
 

@@ -42,7 +42,7 @@ bool CollisionManager::squaredRadiusCheck(GameObject* object1, GameObject* objec
 				break;
 			case ENEMY_BULLET:
 				ScoreBoardManager::Instance()->setHealth(ScoreBoardManager::Instance()->getHealth() - 4);
-				object2->clean();
+				//object2->clean();
 				break;
 			case SHIP:
 				std::cout << "Collision with Ship!" << std::endl;

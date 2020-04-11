@@ -41,7 +41,10 @@ void FinalLevel::draw()
 
 void FinalLevel::update()
 {
-
+	if(ScoreBoardManager::Instance()->enemiesLeft() < 0)
+	{
+		m_pFinalBoss->setIsActive(true);
+	}
 	/*if (ScoreBoardManager::Instance()->getScore() >= 10000)
 	{
 		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
@@ -96,13 +99,14 @@ void FinalLevel::update()
 			m_pMediumBoss->decreaseHealth();
 			m_pShip->mBullets[i]->reset();
 		}
-		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
-			m_pFinalBoss->update();
-		}
+		//if (ScoreBoardManager::Instance()->enemiesLeft() < 0) {
+		//	m_pFinalBoss->update();
+		//}
 	}
 	m_pBackground->update();
 	m_pBackground1->update();
 	m_pMediumBoss->update();
+	m_pFinalBoss->update();
 	//m_pLabel->setText("SCORE: " + std::to_string(TheGame::Instance()->getScore()));
 
 }

@@ -74,7 +74,22 @@ void LevelTwo::update()
 	for (int i = 0; i < MAX_SMALL_ENEMIES; i++) {
 		//Enemies shooting
 		m_pSmallEnemies[i]->handleFiring();
+		for(int k = 0; k < m_pSmallEnemies[i]->MAX_BULLETS; k++)
+		{
+			if(CollisionManager::squaredRadiusCheck(m_pShip, m_pSmallEnemies[i]->pEnemyBullets[k]))
+			{
+				m_pSmallEnemies[i]->pEnemyBullets[k]->reset();
+			}
+		}
 
+	}
+	m_pMediumBoss->handleFiring();
+	for(int i = 0; i < m_pMediumBoss->MAX_BULLETS; i++)
+	{
+		if (CollisionManager::squaredRadiusCheck(m_pShip, m_pMediumBoss->pEnemyBullets[i]))
+		{
+			m_pMediumBoss->pEnemyBullets[i]->reset();
+		}
 	}
 
 	for (int i = 0; i < m_pShip->MAX_BULLETS; i++)

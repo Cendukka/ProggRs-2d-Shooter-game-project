@@ -18,7 +18,7 @@ public:
 	void clean() override;
 	int getHealth();
 
-	static const int MAX_BULLETS = 20;
+	static const int MAX_BULLETS = 2;
 	EnemyBullet* pEnemyBullets[MAX_BULLETS];
 	void handleFiring();
 	void drawBullets();

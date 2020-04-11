@@ -119,6 +119,8 @@ void TutorialScene::handleEvents()
 				TheGame::Instance()->quit();
 				break;
 			case SDLK_1:
+				ScoreBoardManager::Instance()->setPowerUp(0);
+				ScoreBoardManager::Instance()->setScore(0);
 				TheGame::Instance()->changeSceneState(SceneState::START_SCENE);
 				break;
 				//case SDLK_2:
@@ -177,6 +179,8 @@ void TutorialScene::handleEvents()
 
 void TutorialScene::start()
 {
+	m_tutorialStage = 0;
+	
 	m_pShip = new Ship();
 	addChild(m_pShip);
 

@@ -20,36 +20,40 @@ FinalBoss::~FinalBoss()
 
 void FinalBoss::update()
 {
-	std::cout << "Final "<<getPosition().x << std::endl;
-	if (getPosition().x >= Config::SCREEN_WIDTH * 0.9) {
-		setPosition(glm::vec2((getPosition().x - 2), getPosition().y));
-	}
-	//move enemies up
-	if (getMovingUp()) {
-		setPosition(glm::vec2(getPosition().x, (getPosition().y - 2)));
-		if (getPosition().y <= (300 - 200)) {
-			setMovingUp(false);
+	if(m_isActive)
+	{
+		std::cout << "Final " << getPosition().x << std::endl;
+		if (getPosition().x >= Config::SCREEN_WIDTH * 0.9) {
+			setPosition(glm::vec2((getPosition().x - 2), getPosition().y));
 		}
-	}
-	//move enemies down
-	if (!getMovingUp()) {
-		setPosition(glm::vec2(getPosition().x, (getPosition().y + 2)));
-		if (getPosition().y >= (300 + 200)) {
-			setMovingUp(true);
+		//move enemies up
+		if (getMovingUp()) {
+			setPosition(glm::vec2(getPosition().x, (getPosition().y - 2)));
+			if (getPosition().y <= (100)) {
+				setMovingUp(false);
+			}
+		}
+		//move enemies down
+		if (!getMovingUp()) {
+			setPosition(glm::vec2(getPosition().x, (getPosition().y + 2)));
+			if (getPosition().y >= (500)) {
+				setMovingUp(true);
+			}
+		}
+
+		if (m_health <= 0)
+		{
+			setAlpha(0);
+			setIsColliding(false);
+			setPosition(glm::vec2(800 + getWidth(), -getHeight()));
+		}
+
+		for (int i = 0; i < MAX_BULLETS; i++)
+		{
+			pEnemyBullets[i]->update();
 		}
 	}
 
-	if (m_health <= 0)
-	{
-		setAlpha(0);
-		setIsColliding(false);
-		setPosition(glm::vec2(0.0f, -getHeight()));
-	}
-
-	for (int i = 0; i < MAX_BULLETS; i++)
-	{
-		pEnemyBullets[i]->update();
-	}
 }
 
 void FinalBoss::decreaseHealth()
@@ -61,7 +65,7 @@ void FinalBoss::decreaseHealth()
 
 		ScoreBoardManager::Instance()->setEnemies("Decrease");
 		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
-			Game::Instance()->changeSceneState(NEXT_LEVEL_SCENE);
+			Game::Instance()->changeSceneState(END_SCENE);
 		}
 	}
 }
@@ -79,9 +83,9 @@ void FinalBoss::handleFiring()
 {
 	for (int i = 0; i < MAX_BULLETS; i++)
 	{
-		if (!pEnemyBullets[i]->isActive())
+		if (!pEnemyBullets[i]->isActive() && m_isActive)
 		{
-			std::cout << "Enemy bullet ei aktiivinen" << std::endl;
+			std::cout << "Enemy bullet is active" << std::endl;
 			pEnemyBullets[i]->fire(this->getPosition());
 			break;
 		}
@@ -94,4 +98,14 @@ void FinalBoss::drawBullets()
 	{
 		pEnemyBullets[i]->draw();
 	}
+}
+
+void FinalBoss::setIsActive(bool isActive)
+{
+	m_isActive = isActive;
+}
+
+bool FinalBoss::getIsActive()
+{
+	return m_isActive;
 }

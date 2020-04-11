@@ -45,7 +45,8 @@ void Level1Scene::update()
 	if(ScoreBoardManager::Instance()->getScore() >= 5000)
 	{
 		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
-		TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
+		//TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
+		TheGame::Instance()->changeSceneState(SceneState::LEVEL_TWO);
 	}
 	//ship follows the mouse
 	//also checks that ship won't go over half of the screen
@@ -234,7 +235,7 @@ void Level1Scene::start()
 	m_pMediumBoss = new MediumBoss();
 	//SDL_Color color = { 255, 0, 0, 255 };
 	//m_pLabel = new Label("", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
-	ScoreBoardManager::Instance()->Start();
+	//ScoreBoardManager::Instance()->Start();
 	//Creates 3 small enemies
 	/*for (int i = 0; i < MAX_SMALL_ENEMIES; i++)
 	{
@@ -248,6 +249,7 @@ void Level1Scene::start()
 		m_pComets[i] = new Comet();
 	}
 	ScoreBoardManager::Instance()->Start();
+	ScoreBoardManager::Instance()->setHealth(100);
 }
 
 glm::vec2 Level1Scene::getMousePosition()
