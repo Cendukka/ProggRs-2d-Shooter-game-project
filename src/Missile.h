@@ -8,12 +8,12 @@
 #include <SDL_hints.h>
 #include "Comet.h"
 
-enum MissilePosition
-{
-	TOP,
-	MIDDLE,
-	BOTTOM
-};
+//enum MissilePosition
+//{
+//	TOP,
+//	MIDDLE,
+//	BOTTOM
+//};
 
 class Missile : public DisplayObject
 {
@@ -29,7 +29,8 @@ public:
 	bool isActive();
 
 	void fire(glm::vec2 position);
-	void fire(glm::vec2 position, MissilePosition missilePosition);
+	void fire(glm::vec2 position, glm::vec2 destination);
+	//void fire(glm::vec2 position, MissilePosition missilePosition);
 	//setter
 	void setSpeed(float newSpeed);
 	//getter
@@ -44,8 +45,9 @@ private:
 	bool m_isActive;
 	Comet* m_pComet;
 	float m_speed;
+	glm::vec2 m_destination;
 
-	MissilePosition m_missilePosition;
+	//MissilePosition m_missilePosition;
 
 
 };

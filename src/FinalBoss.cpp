@@ -10,9 +10,13 @@ FinalBoss::FinalBoss()
 {
 	m_health = 50;
 
-	for (int i = 0; i < MAX_BULLETS; i++)
+	//for (int i = 0; i < MAX_BULLETS; i++)
+	//{
+	//	pEnemyBullets[i] = new EnemyBullet();
+	//}
+	for (int i = 0; i < MAX_MISSILES; i++)
 	{
-		pEnemyBullets[i] = new EnemyBullet();
+		m_missiles[i] = new Missile();
 	}
 }
 FinalBoss::~FinalBoss()
@@ -48,9 +52,13 @@ void FinalBoss::update()
 			setPosition(glm::vec2(800 + getWidth(), -getHeight()));
 		}
 
-		for (int i = 0; i < MAX_BULLETS; i++)
+		//for (int i = 0; i < MAX_BULLETS; i++)
+		//{
+		//	pEnemyBullets[i]->update();
+		//}
+		for(int i = 0; i < MAX_MISSILES; i++)
 		{
-			pEnemyBullets[i]->update();
+			m_missiles[i]->update();
 		}
 	}
 
@@ -92,11 +100,34 @@ void FinalBoss::handleFiring()
 	}
 }
 
+void FinalBoss::handleFiring(glm::vec2 destination)
+{
+	for(int i = 0; i < MAX_MISSILES; i++)
+	{
+		if(!m_missiles[i]->isActive() && m_isActive)
+		{
+			if(i == 0)
+			{
+				m_missiles[i]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y + this->getHeight() * 1 / 2), destination);
+			}else if(i == 1)
+			{
+				m_missiles[i]->fire(glm::vec2(this->getPosition().x,
+					this->getPosition().y - this->getHeight() * 1 / 2), destination);
+			}
+		}
+	}
+}
+
 void FinalBoss::drawBullets()
 {
-	for (int i = 0; i < MAX_BULLETS; i++)
+	//for (int i = 0; i < MAX_BULLETS; i++)
+	//{
+	//	pEnemyBullets[i]->draw();
+	//}
+	for(int i = 0; i < MAX_MISSILES; i++)
 	{
-		pEnemyBullets[i]->draw();
+		m_missiles[i]->draw();
 	}
 }
 
@@ -108,4 +139,9 @@ void FinalBoss::setIsActive(bool isActive)
 bool FinalBoss::getIsActive()
 {
 	return m_isActive;
+}
+
+void FinalBoss::setDestination(glm::vec2 destination)
+{
+	m_destination = destination;
 }

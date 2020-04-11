@@ -7,7 +7,7 @@
 
 Missile::Missile()
 {
-	TheTextureManager::Instance()->load("../Assets/Sprites/Missile/Missile_1_Flying_000_Right.png",
+	TheTextureManager::Instance()->load("../Assets/Sprites/Missile/enemyMissile.png",
 		"Missile", TheGame::Instance()->getRenderer());
 
 	glm::vec2 size = TheTextureManager::Instance()->getTextureSize("Missile");
@@ -19,7 +19,7 @@ Missile::Missile()
 	setSpeed(10.0f);
 	setActive(false);
 	m_alpha = 0;
-	m_missilePosition = MIDDLE;
+	//m_missilePosition = MIDDLE;
 
 }
 
@@ -37,28 +37,27 @@ void Missile::draw()
 
 void Missile::update()
 {
-	if (getPosition().x >= Config::SCREEN_WIDTH + getWidth())
-	{
-		reset();
-	}
+	checkBounds();
 	if (isActive())
 	{
-		if (m_missilePosition == TOP)
-		{
-			setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y + getSpeed() / 2));
-		}
-		else if (m_missilePosition == BOTTOM)
-		{
-			setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y - getSpeed() / 2));
-		}
-		else if (m_missilePosition == MIDDLE)
-		{
-			setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y));
-		}
-	}
-	if (m_pComet != nullptr)
-	{
-		//Collision::squaredRadiusCheck(this, m_pComet);
+		//if (m_missilePosition == TOP)
+		//{
+		//	setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y + getSpeed() / 2));
+		//}
+		//else if (m_missilePosition == BOTTOM)
+		//{
+		//	setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y - getSpeed() / 2));
+		//}
+		//else if (m_missilePosition == MIDDLE)
+		//{
+		//	setPosition(glm::vec2((getPosition().x + getSpeed()), getPosition().y));
+		//}
+		glm::vec2 position = getPosition();
+
+		position.x -= 1 * 2.0f;
+		//position.y -= 1 * 2.0f;
+
+		setPosition(position);
 	}
 }
 
@@ -100,15 +99,25 @@ void Missile::fire(glm::vec2 position)
 	setActive(true);
 }
 
-void Missile::fire(glm::vec2 position, MissilePosition missilePosition)
+void Missile::fire(glm::vec2 position, glm::vec2 destination)
 {
-	m_missilePosition = missilePosition;
 	setIsColliding(false);
 	m_alpha = 255;
 	setPosition(position);
-	draw();
+	//draw();
 	setActive(true);
+	m_destination = destination;
 }
+
+//void Missile::fire(glm::vec2 position, MissilePosition missilePosition)
+//{
+//	m_missilePosition = missilePosition;
+//	setIsColliding(false);
+//	m_alpha = 255;
+//	setPosition(position);
+//	draw();
+//	setActive(true);
+//}
 
 void Missile::setSpeed(float newSpeed)
 
@@ -123,8 +132,8 @@ float Missile::getSpeed()
 
 void Missile::checkBounds()
 {
-	if (getPosition().x > Config::SCREEN_WIDTH)
+	if (getPosition().x <= -Config::SCREEN_WIDTH - getWidth())
 	{
-		setPosition(glm::vec2(0.0f, getPosition().y));
+		reset();
 	}
 }

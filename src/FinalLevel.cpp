@@ -36,6 +36,7 @@ void FinalLevel::draw()
 	}
 	m_pMediumBoss->draw();
 	m_pFinalBoss->draw();
+	m_pFinalBoss->drawBullets();
 	ScoreBoardManager::Instance()->Draw();
 }
 

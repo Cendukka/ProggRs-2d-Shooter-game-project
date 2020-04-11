@@ -5,6 +5,7 @@
 
 #include "Enemy.h"
 #include "EnemyBullet.h"
+#include "Missile.h"
 
 
 class FinalBoss : public Enemy
@@ -21,14 +22,18 @@ public:
 	static const int MAX_BULLETS = 20;
 	EnemyBullet* pEnemyBullets[MAX_BULLETS];
 	void handleFiring();
+	void handleFiring(glm::vec2 destination);
 	void drawBullets();
 	void setIsActive(bool isActive);
 	bool getIsActive();
-
+	void setDestination(glm::vec2 destination);
+	static const int MAX_MISSILES = 2;
+	Missile* m_missiles[MAX_MISSILES];
 private:
 
 	int m_health;
 	bool m_isActive;
+	glm::vec2 m_destination;
 };
 
 
