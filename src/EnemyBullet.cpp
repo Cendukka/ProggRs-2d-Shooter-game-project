@@ -18,6 +18,8 @@ EnemyBullet::EnemyBullet()
 	setSpeed(10.0f);
 	setActive(false);
 	m_alpha = 0;
+	m_ySpeed = 0.0f;
+	reset();
 }
 
 EnemyBullet::~EnemyBullet() = default;
@@ -30,6 +32,7 @@ void EnemyBullet::draw()
 
 	TheTextureManager::Instance()->draw("EnemyBullet", xComponent, yComponent,
 		TheGame::Instance()->getRenderer(), 0, m_alpha, true);
+	
 }
 
 void EnemyBullet::update()
@@ -38,9 +41,13 @@ void EnemyBullet::update()
 	{
 		reset();
 	}
+	if(!isActive())
+	{
+		setIsColliding(false);
+	}
 	if (isActive())
 	{
-		setPosition(glm::vec2((getPosition().x - getSpeed()), getPosition().y));
+		setPosition(glm::vec2((getPosition().x - getSpeed()), getPosition().y + m_ySpeed));
 	}
 }
 
@@ -49,7 +56,7 @@ void EnemyBullet::update()
 void EnemyBullet::reset()
 {
 	setIsColliding(false);
-	setPosition(glm::vec2(-getWidth(), -getHeight()));
+	setPosition(glm::vec2(800 + getWidth(), 600 + getHeight()));
 	setActive(false);
 	m_alpha = 0;
 }
@@ -79,15 +86,25 @@ void EnemyBullet::fire(glm::vec2 position)
 	setActive(true);
 }
 
+void EnemyBullet::fire(glm::vec2 position, float ySpeed)
+{
+	setIsColliding(false);
+	m_alpha = 255;
+	setPosition(position);
+	draw();
+	setActive(true);
+	m_ySpeed = ySpeed;
+}
+
 void EnemyBullet::setSpeed(float newSpeed)
 
 {
-	m_speed = newSpeed;
+	m_xSpeed = newSpeed;
 }
 
 float EnemyBullet::getSpeed()
 {
-	return m_speed;
+	return m_xSpeed;
 }
 
 void EnemyBullet::checkBounds()

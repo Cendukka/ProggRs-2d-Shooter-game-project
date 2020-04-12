@@ -1,5 +1,6 @@
 #include "PowerUp.h"
 #include "Game.h"
+#include "ScoreBoardManager.h"
 
 PowerUp::PowerUp()
 {
@@ -45,6 +46,10 @@ void PowerUp::update()
 	{
 		reset();
 	}
+	if(ScoreBoardManager::Instance()->getPowerUp() >= 2)
+	{
+		reset();
+	}
 
 }
 
@@ -62,6 +67,7 @@ void PowerUp::reset()
 {
 	isActive = false;
 	glm::vec2 currentPosition = getPosition();
-	currentPosition.x = -1000;
+	currentPosition.x = 1000 + getWidth();
+	currentPosition.y = 1000 + getHeight();
 	setPosition(currentPosition);
 }

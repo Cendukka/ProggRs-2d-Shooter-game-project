@@ -101,14 +101,14 @@ void SmallEnemy::decreaseHealth()
 	if (m_health <= 0) {
 		//increas the score when enemy dies
 		ScoreBoardManager::Instance()->setScore(ScoreBoardManager::Instance()->getScore() + 300);
-		clean();
+		//clean();
 		ScoreBoardManager::Instance()->setEnemies("Decrease");
-		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
-			if (Game::Instance()->getCurrentScene() == LEVEL_TWO) {
+		//if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
+		//	if (Game::Instance()->getCurrentScene() == LEVEL_TWO) {
 
-				Game::Instance()->changeSceneState(TO_FINAL_LEVEL_SCENE);
-			}
-		}
+		//		Game::Instance()->changeSceneState(TO_FINAL_LEVEL_SCENE);
+		//	}
+		//}
 	}
 }
 

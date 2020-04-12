@@ -18,8 +18,7 @@ Ship::Ship() :
 	
 	setWidth(size.x);
 	setHeight(size.y);
-	setPosition(getPosition());
-	setVelocity(glm::vec2(0.0f, 0.0f));
+	setPosition(glm::vec2(10.0f + getWidth(), 300.0f));
 	setAcceleration(glm::vec2(0.0f, 0.0f));
 	setIsColliding(false);
 	setType(GameObjectType::SHIP);

@@ -71,6 +71,7 @@ public:
 	int getCurrentScene();
 
 	void changeSceneState(SceneState newState);
+	void changeSceneState(SceneState newState, int powerUp);
 	void quit();
 
 private:

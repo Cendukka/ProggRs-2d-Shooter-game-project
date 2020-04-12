@@ -1,24 +1,12 @@
-﻿  FinalLevel.cpp
-G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(152,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+﻿  EnemyBullet.cpp
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\EnemyBullet.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\FinalLevel.cpp(153,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\EnemyBullet.cpp(30,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-  LevelTwo.cpp
-G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(156,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\src\LevelTwo.cpp(157,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Generating Code...
-  Template.vcxproj -> G:\Semester 4 - Web Game Programming with C++\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

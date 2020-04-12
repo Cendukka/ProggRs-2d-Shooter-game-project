@@ -43,11 +43,6 @@ void LevelTwo::draw()
 
 void LevelTwo::update()
 {
-	/*if (ScoreBoardManager::Instance()->getScore() >= 1000000)
-	{
-		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
-		TheGame::Instance()->changeSceneState(SceneState::TO_FINAL_LEVEL_SCENE);
-	}*/
 	//ship follows the mouse
 	//also checks that ship won't go over half of the screen
 	if (m_mousePosition.x > (Config::SCREEN_WIDTH * 0.5f))

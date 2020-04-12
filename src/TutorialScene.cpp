@@ -183,6 +183,7 @@ void TutorialScene::start()
 	m_tutorialStage = 0;
 	
 	m_pShip = new Ship();
+	m_pShip->setPosition(glm::vec2(10.0f + getWidth(), 300.0f));
 	addChild(m_pShip);
 
 	m_pComet = new Comet();

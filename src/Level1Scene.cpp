@@ -46,7 +46,7 @@ void Level1Scene::update()
 	{
 		std::cout << ScoreBoardManager::Instance()->getScore() << std::endl;
 		//TheGame::Instance()->changeSceneState(SceneState::NEXT_LEVEL_SCENE);
-		TheGame::Instance()->changeSceneState(SceneState::LEVEL_TWO);
+		TheGame::Instance()->changeSceneState(SceneState::LEVEL_TWO, ScoreBoardManager::Instance()->getPowerUp());
 	}
 	//ship follows the mouse
 	//also checks that ship won't go over half of the screen

@@ -46,6 +46,7 @@ void ScoreBoardManager::setHealth(const int new_lives)
 	m_health = new_lives;
 	if (m_health < 1)
 	{
+		std::cout << "Finale!!! " << std::endl;
 		Game::Instance()->changeSceneState(END_SCENE);
 	}
 	m_pHealthLabel->setText("Lives: " + std::to_string(m_health));
@@ -72,6 +73,7 @@ void ScoreBoardManager::setEnemies(std::string setType)
 	else if (setType == "Decrease") {
 		m_enemiesLeft -= 1;
 	}
+	std::cout << "Enemies: " << m_enemiesLeft << std::endl;
 }
 
 int ScoreBoardManager::enemiesLeft()

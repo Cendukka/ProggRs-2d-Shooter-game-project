@@ -36,6 +36,7 @@ void FinalLevel::draw()
 		m_pSmallEnemies[i]->drawBullets();
 	}
 	m_pMediumBoss->draw();
+	m_pMediumBoss->drawBullets();
 	m_pFinalBoss->draw();
 	m_pFinalBoss->drawBullets();
 	ScoreBoardManager::Instance()->Draw();
@@ -89,20 +90,6 @@ void FinalLevel::update()
 	
 	for (int i = 0; i < m_pShip->MAX_BULLETS; i++)
 	{
-		/*for (int j = 0; j < MAX_COMETS; j++)
-		{
-			if (Collision::squaredRadiusCheck(m_pComets[j], m_pShip->mBullets[i]))
-			{
-				m_pShip->mBullets[i]->reset();
-				m_pComets[j]->getDamage();
-			}
-			if (Collision::squaredRadiusCheck(m_pShip, m_pComets[j]))
-			{
-				m_pShip->decreaseLife();
-				m_pComets[j]->reset();
-
-			}
-		}*/
 		//Update enemies and check collision
 		for (int k = 0; k < MAX_SMALL_ENEMIES; k++) {
 			if (Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pSmallEnemies[k]))
@@ -117,9 +104,21 @@ void FinalLevel::update()
 			m_pMediumBoss->decreaseHealth();
 			m_pShip->mBullets[i]->reset();
 		}
+		if(Collision::squaredRadiusCheck(m_pShip->mBullets[i], m_pFinalBoss))
+		{
+			m_pFinalBoss->decreaseHealth();
+			m_pShip->mBullets[i]->reset();
+		}
 		//if (ScoreBoardManager::Instance()->enemiesLeft() < 0) {
 		//	m_pFinalBoss->update();
 		//}
+	}
+	for(int i = 0; i < m_pFinalBoss->MAX_BULLETS; i++)
+	{
+		if(CollisionManager::squaredRadiusCheck(m_pShip, m_pFinalBoss->pEnemyBullets[i]))
+		{
+			m_pFinalBoss->pEnemyBullets[i]->reset();
+		}
 	}
 	m_pBackground->update();
 	m_pBackground1->update();
@@ -243,10 +242,16 @@ void FinalLevel::start()
 	// allocates memory on the heap for this game object
 
 	m_pShip = new Ship();
+	m_pShip->setPosition(glm::vec2(10.0f + getWidth(), 300.0f));
+	addChild(m_pShip);
 	m_pBackground = new Background();
+	addChild(m_pBackground);
 	m_pBackground1 = new Background1();
+	addChild(m_pBackground1);
 	m_pMediumBoss = new MediumBoss();
+	addChild(m_pMediumBoss);
 	m_pFinalBoss = new FinalBoss();
+	addChild(m_pFinalBoss);
 	//SDL_Color color = { 255, 0, 0, 255 };
 	//m_pLabel = new Label("", "Consolas", 20, color, glm::vec2(75.0f, 25.0f));
 	ScoreBoardManager::Instance()->Start();
@@ -263,6 +268,7 @@ void FinalLevel::start()
 	//	m_pComets[i] = new Comet();
 	//}
 	ScoreBoardManager::Instance()->Start();
+	ScoreBoardManager::Instance()->setHealth(100);
 }
 
 glm::vec2 FinalLevel::getMousePosition()

@@ -4,6 +4,8 @@
 #include <algorithm>
 #include "TileComparators.h"
 #include <iomanip>
+
+#include "ScoreBoardManager.h"
 #include "TutorialScene.h"
 
 
@@ -194,6 +196,66 @@ void Game::changeSceneState(SceneState newState)
 		}
 	}
 	
+}
+
+void Game::changeSceneState(SceneState newState, int powerUp)
+{
+	if (newState != m_currentSceneState) {
+
+		// if this is not the first time we're rendering a new scene
+		if (m_currentSceneState != SceneState::NO_SCENE)
+		{
+			m_currentScene->clean();
+			std::cout << "cleaning previous scene" << std::endl;
+			FontManager::Instance()->clean();
+			std::cout << "cleaning FontManager" << std::endl;
+			TextureManager::Instance()->clean();
+			std::cout << "cleaning TextureManager" << std::endl;
+		}
+
+		m_currentSceneState = newState;
+
+		switch (m_currentSceneState)
+		{
+		case SceneState::START_SCENE:
+			m_currentScene = new StartScene();
+			std::cout << "start scene activated" << std::endl;
+			break;
+		case SceneState::LEVEL1_SCENE:
+			m_currentScene = new Level1Scene();
+			std::cout << "level 1 scene activated" << std::endl;
+			break;
+		case SceneState::NEXT_LEVEL_SCENE:
+			m_currentScene = new NextLevelScene();
+			std::cout << "Next level scene activated" << std::endl;
+			break;
+		case SceneState::LEVEL_TWO:
+			m_currentScene = new LevelTwo();
+			std::cout << "Level Two Scene Started" << std::endl;
+			break;
+		case SceneState::TO_FINAL_LEVEL_SCENE:
+			m_currentScene = new ToFinalLevelScene();
+			std::cout << "To Final Level Scene Started" << std::endl;
+			break;
+		case SceneState::FINAL_LEVEL:
+			m_currentScene = new FinalLevel();
+			std::cout << "Final Level Started" << std::endl;
+			ScoreBoardManager::Instance()->setHealth(100);
+			break;
+		case SceneState::END_SCENE:
+			m_currentScene = new EndScene();
+			std::cout << "end scene activated" << std::endl;
+			break;
+		case SceneState::TUTORIAL_SCENE:
+			m_currentScene = new TutorialScene();
+			std::cout << "Tutorial scene activated" << std::endl;
+			break;
+		default:
+			std::cout << "default case activated" << std::endl;
+			break;
+		}
+		ScoreBoardManager::Instance()->setPowerUp(powerUp);
+	}
 }
 
 void Game::quit()

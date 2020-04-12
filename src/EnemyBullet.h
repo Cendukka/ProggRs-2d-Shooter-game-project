@@ -24,6 +24,7 @@ public:
 	bool isActive();
 
 	void fire(glm::vec2 position);
+	void fire(glm::vec2 position, float ySpeed);
 	//setter
 	void setSpeed(float newSpeed);
 	//getter
@@ -35,7 +36,8 @@ private:
 
 	Uint8 m_alpha;
 	bool m_isActive;
-	float m_speed;
+	float m_xSpeed;
+	float m_ySpeed;
 
 };
 

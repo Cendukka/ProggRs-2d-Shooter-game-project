@@ -59,13 +59,14 @@ void MediumBoss::decreaseHealth()
 		ScoreBoardManager::Instance()->setScore(ScoreBoardManager::Instance()->getScore() + 500);
 
 		ScoreBoardManager::Instance()->setEnemies("Decrease");
-		if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {
-			clean();
+		/*if (ScoreBoardManager::Instance()->enemiesLeft() <= 0) {*/
+			
 			if (Game::Instance()->getCurrentScene() == LEVEL_TWO) {
 
-				Game::Instance()->changeSceneState(TO_FINAL_LEVEL_SCENE);
+				Game::Instance()->changeSceneState(FINAL_LEVEL, ScoreBoardManager::Instance()->getPowerUp());
 			}
-		}
+			//clean();
+		/*}*/
 	}
 }
 
@@ -84,9 +85,18 @@ void MediumBoss::handleFiring()
 	{
 		if (!pEnemyBullets[i]->isActive())
 		{
-			std::cout << "Enemy bullet ei aktiivinen" << std::endl;
-			pEnemyBullets[i]->fire(this->getPosition());
-			break;
+			if(i == 0)
+			{
+				std::cout << "Enemy bullet ei aktiivinen" << std::endl;
+				pEnemyBullets[i]->fire(glm::vec2(this->getPosition().x, this->getPosition().y + getHeight()/3));
+				break;
+			}else if(i == 1)
+			{
+				std::cout << "Enemy bullet ei aktiivinen" << std::endl;
+				pEnemyBullets[i]->fire(glm::vec2(this->getPosition().x, this->getPosition().y - getHeight() / 3));
+				break;
+			}
+			
 		}
 	}
 }
