@@ -9,6 +9,7 @@
 NextLevelScene::NextLevelScene()
 {
 	NextLevelScene::start();
+	/*TheSoundManager::Instance()->playSound("gamesound", 0);*/
 }
 
 NextLevelScene::~NextLevelScene()

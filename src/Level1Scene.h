@@ -11,6 +11,7 @@
 #include "Comet.h"
 #include "SmallEnemy.h"
 #include "MediumBoss.h"
+#include "SoundManager.h"
 
 class Level1Scene : public Scene
 {

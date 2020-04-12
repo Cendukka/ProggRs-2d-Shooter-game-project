@@ -1,12 +1,35 @@
-﻿  EnemyBullet.cpp
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\EnemyBullet.cpp(29,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+﻿  NextLevelScene.cpp
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(55,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\src\EnemyBullet.cpp(30,17): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\NextLevelScene.cpp(56,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
           with
           [
               T=float
           ]
-  Template.vcxproj -> C:\Users\Vladislav Ostrikov\Desktop\Folders\College\Winter 2020\COMP 397\Project\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe
+  StartScene.cpp
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\StartScene.cpp(59,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\StartScene.cpp(60,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  ToFinalLevelScene.cpp
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\ToFinalLevelScene.cpp(55,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\src\ToFinalLevelScene.cpp(56,36): warning C4244: '=': conversion from 'Sint32' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  Template.vcxproj -> C:\Users\jaiku\Desktop\ProggRs-2d-Shooter-game-project\bin\Debug\Template.exe

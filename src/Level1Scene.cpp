@@ -9,7 +9,8 @@
 
 Level1Scene::Level1Scene()
 {
-	start();
+	start();	
+	TheSoundManager::Instance()->playSound("music", 0);
 }
 
 Level1Scene::~Level1Scene()

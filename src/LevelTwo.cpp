@@ -9,6 +9,7 @@
 LevelTwo::LevelTwo()
 {
 	start();
+	TheSoundManager::Instance()->playSound("music", 0);
 }
 
 LevelTwo::~LevelTwo()

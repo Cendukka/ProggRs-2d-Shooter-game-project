@@ -9,6 +9,7 @@
 StartScene::StartScene()
 {
 	StartScene::start();
+	
 }
 
 StartScene::~StartScene()
@@ -33,6 +34,7 @@ void StartScene::update()
 	m_pStartButton->ButtonClick();
 	m_pTutorialButton->setMousePosition(m_mousePosition);
 	m_pTutorialButton->ButtonClick();
+	
 	
 }
 
@@ -88,6 +90,7 @@ void StartScene::handleEvents()
 				break;
 			case SDLK_1:
 				TheGame::Instance()->changeSceneState(SceneState::LEVEL1_SCENE);
+				//TheSoundManager::Instance()->playSound("gamesound", 0);
 				break;
 			case SDLK_2:
 				TheGame::Instance()->changeSceneState(SceneState::END_SCENE);
@@ -124,4 +127,10 @@ void StartScene::start()
 	addChild(m_pBackground1);
 
 	TheSoundManager::Instance()->load("../Assets/audio/boom.mp3", "boom", SOUND_SFX);
+	TheSoundManager::Instance()->load("../Assets/audio/music.mp3", "music", SOUND_SFX);
+	//TheSoundManager::Instance()->load("../Assets/audio/gamesound.ogg", "gamesound", SOUND_SFX);
+
+	
+
+	
 }

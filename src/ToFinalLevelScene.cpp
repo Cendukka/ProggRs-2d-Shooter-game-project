@@ -9,6 +9,7 @@
 ToFinalLevelScene::ToFinalLevelScene()
 {
 	ToFinalLevelScene::start();
+	//TheSoundManager::Instance()->playSound("gamesound", 0);
 }
 
 ToFinalLevelScene::~ToFinalLevelScene()

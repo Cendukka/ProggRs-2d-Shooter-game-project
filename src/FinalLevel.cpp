@@ -10,6 +10,7 @@
 FinalLevel::FinalLevel()
 {
 	start();
+	TheSoundManager::Instance()->playSound("music", 0);
 }
 
 FinalLevel::~FinalLevel()

@@ -28,8 +28,6 @@ public:
 private:
 	CollisionManager();
 	~CollisionManager();
-
-	
 };
 
 typedef CollisionManager Collision;
